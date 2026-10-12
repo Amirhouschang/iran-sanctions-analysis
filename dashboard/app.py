@@ -39,9 +39,9 @@ TEXT = {
         "no_data": "No data found. Run iran_sanctions_analysis.ipynb first (section 9 exports the tables to dashboard/data).",
         "show_data": "Show data",
         "kpi_cases": "Sanction cases against Iran",
-        "kpi_cases_help": "{share}% of all {total:,} cases worldwide",
-        "kpi_rank": "Rank among sanctioned countries",
-        "kpi_rank_help": "After Russia",
+        "kpi_cases_help": "{share}% of all {total} cases worldwide",
+        "kpi_rank": "Rank worldwide",
+        "kpi_rank_help": "Among all sanctioned countries, after Russia",
         "kpi_force": "Cases in force, end of 2025",
         "kpi_us": "Imposed by the US",
         "kpi_eu": "Imposed by the EU",
@@ -65,7 +65,7 @@ TEXT = {
         # senders
         "t_iran_map": "Countries imposing sanctions on Iran, number of cases 1979–2025",
         "cap_iran_map": "Dark grey: Iran. EU cases are assigned to all EU member states at the time of imposition. UN cases (7) are not shown.",
-        "t_actors": "Top 10 sanctioning actors against Iran (EU and UN as single actors)",
+        "t_actors": "Top 10 sanctioning actors against Iran, tied ranks included (EU and UN as single actors)",
         "cap_actors": "A case imposed jointly by several actors counts for each of them.",
         "data_actors": "All sanctioning actors against Iran",
         "data_map_countries": "Countries on the map (EU cases counted for each member state)",
@@ -86,7 +86,7 @@ TEXT = {
         "txt_instr": (
             "- **Trade** sanctions are far more common against Iran than worldwide (71% vs. 41%).\n"
             "- **Financial** sanctions rose from one in three new cases (1979–2005) to almost nine in ten (2017–2025).\n"
-            "- **Asset freezes** (86%) and **bans on financial services** (81%) dominate; SWIFT exclusion was used twice, both by the EU (2012, 2025)."
+            "- Among the {fin} financial sanction cases, **asset freezes** (86%) and **bans on financial services** (81%) dominate; SWIFT exclusion was used twice, both by the EU (2012, 2025)."
         ),
         # outcomes
         "kpi_ended": "Cases ended / still in force (end of 2025)",
@@ -103,12 +103,12 @@ TEXT = {
         "h_targets": "Most sanctioned countries",
         "t_targets": "Top 10 sanctioned countries, 1949–2025",
         "other_countries": "Other countries",
-        "data_targets": "Top 15 sanctioned countries by objective",
+        "data_targets": "Top 15 sanctioned countries by objective (tied ranks included)",
         "h_world": "Who sanctions the world?",
         "t_world_map": "Number of sanction cases imposed per country, 1949–2025",
-        "cap_world_map": "Grey: countries with only 1–5 cases. EU cases are assigned to all EU member states at the time of imposition. Cases by the UN and other organisations are not shown.",
+        "cap_world_map": "Grey: countries with only 1–5 cases. EU cases, including those of its predecessor, the EEC, are assigned to all member states at the time of imposition. Cases by the UN and other organisations are not shown.",
         "h_sender_countries": "Top 15 sanctioning countries",
-        "cap_senders": "Cases = own cases + cases imposed as an EU member. Not countries and therefore listed separately: EU {eu} cases, UN {un} cases. Germany includes one case of the former GDR; without it, Germany and France share rank 3 (226 cases each).",
+        "cap_senders": "Cases = own cases + cases imposed as an EU or EEC member. Not countries and therefore listed separately: EU {eu} cases, UN {un} cases. Germany includes one case of the former GDR; without it, Germany and France share rank 3 (240 cases each).",
         "h_eu": "The EU as a sanctioning actor",
         "kpi_eu_cases": "EU cases",
         "kpi_eu_rank_help": "Rank {rank} after the US",
@@ -119,7 +119,7 @@ TEXT = {
         "t_eu_targets": "Main targets of EU sanctions",
         "t_eu_instr": "EU instruments vs. all sanctions worldwide",
         "txt_germany": (
-            "- **Germany** ranks #{rank} worldwide ({cases} cases incl. EU sanctions) and has {own} national cases of its own. "
+            "- **Germany** ranks #{rank} worldwide ({cases} cases incl. EU and EEC sanctions) and has {own} national cases of its own. "
             "Against Iran it acts through the EU and the E3 (France, Germany, UK), which triggered the return of the UN sanctions in 2025."
         ),
         "h_compare": "Non-Western senders compared",
@@ -139,7 +139,7 @@ TEXT = {
 - Outcome ratings are assessments made when a case ends, not measured effects.
 - The data records which measures were imposed, not their economic or humanitarian impact.
 - Coverage for Iran starts in 1979.
-- On the maps, EU cases are assigned to all member states; the UN and other organisations are not shown.
+- On the maps, EU and EEC cases are assigned to all member states; the UN and other organisations are not shown.
 
 **Sources**
 - Felbermayr, G., A. Kirilakha, C. Syropoulos, E. Yalcin, and Y. V. Yotov (2020), "The Global Sanctions Data Base,"
@@ -159,9 +159,9 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         "no_data": "Keine Daten gefunden. Zuerst iran_sanctions_analysis.ipynb ausführen (Abschnitt 9 exportiert die Tabellen nach dashboard/data).",
         "show_data": "Daten anzeigen",
         "kpi_cases": "Sanktionsfälle gegen den Iran",
-        "kpi_cases_help": "{share} % aller {total:,} Fälle weltweit",
-        "kpi_rank": "Rang unter den sanktionierten Ländern",
-        "kpi_rank_help": "Nach Russland",
+        "kpi_cases_help": "{share} % aller {total} Fälle weltweit",
+        "kpi_rank": "Rang weltweit",
+        "kpi_rank_help": "Unter allen sanktionierten Ländern, nach Russland",
         "kpi_force": "Fälle in Kraft, Ende 2025",
         "kpi_us": "Von den USA verhängt",
         "kpi_eu": "Von der EU verhängt",
@@ -183,7 +183,7 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         ),
         "t_iran_map": "Länder mit Sanktionen gegen den Iran, Anzahl der Fälle 1979–2025",
         "cap_iran_map": "Dunkelgrau: Iran. EU-Fälle zählen für alle Länder, die bei Verhängung EU-Mitglied waren. UN-Fälle (7) sind nicht dargestellt.",
-        "t_actors": "Top 10 der Sanktionsakteure gegen den Iran (EU und UN als je ein Akteur)",
+        "t_actors": "Top 10 der Sanktionsakteure gegen den Iran, gleiche Ränge eingeschlossen (EU und UN als je ein Akteur)",
         "cap_actors": "Ein Fall mehrerer Akteure zählt für jeden von ihnen.",
         "data_actors": "Alle Sanktionsakteure gegen den Iran",
         "data_map_countries": "Länder auf der Karte (EU-Fälle für jedes Mitglied gezählt)",
@@ -203,10 +203,10 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         "txt_instr": (
             "- **Handelssanktionen** sind gegen den Iran viel häufiger als weltweit (71 % gegenüber 41 %).\n"
             "- **Finanzsanktionen** stiegen von jedem dritten neuen Fall (1979–2005) auf fast neun von zehn (2017–2025).\n"
-            "- **Vermögenssperren** (86 %) und **Verbote von Finanzdienstleistungen** (81 %) dominieren; einen SWIFT-Ausschluss gab es zweimal, beide Male durch die EU (2012, 2025)."
+            "- Unter den {fin} Fällen mit Finanzsanktionen dominieren **Vermögenssperren** (86 %) und **Verbote von Finanzdienstleistungen** (81 %); einen SWIFT-Ausschluss gab es zweimal, beide Male durch die EU (2012, 2025)."
         ),
         "kpi_ended": "Fälle beendet / noch in Kraft (Ende 2025)",
-        "t_outcomes": "Ergebnisse beendeter Fälle nach Begründung",
+        "t_outcomes": "Ergebnisse beendeter Fälle nach Ziel",
         "x_objectives": "Anzahl der Ziele",
         "cap_outcomes": "Ergebnisse werden pro Ziel bei Ende eines Falls bewertet, auf Grundlage von Regierungsangaben und Presseberichten.",
         "t_outcome_comp": "Anteil der Ergebnisse: Iran im Vergleich zu allen Sanktionen weltweit",
@@ -215,15 +215,15 @@ Full analysis: `iran_sanctions_analysis.ipynb`
             "- **Atomprogramm:** 14 von 17 Zielen gelten als voller Erfolg. Das sind fast nur die 2016 durch das JCPOA aufgehobenen "
             "Sanktionen, die die USA (2018) und die UN (2025) wieder verhängt haben; die Bewertung ist mit Vorsicht zu lesen."
         ),
-        "h_targets": "Die meistsanktionierten Länder",
+        "h_targets": "Die am häufigsten sanktionierten Länder",
         "t_targets": "Top 10 der sanktionierten Länder, 1949–2025",
         "other_countries": "Andere Länder",
-        "data_targets": "Top 15 der sanktionierten Länder nach Begründung",
+        "data_targets": "Top 15 der sanktionierten Länder nach Ziel (gleiche Ränge eingeschlossen)",
         "h_world": "Wer sanktioniert die Welt?",
         "t_world_map": "Anzahl der verhängten Sanktionsfälle pro Land, 1949–2025",
-        "cap_world_map": "Grau: Länder mit nur 1–5 Fällen. EU-Fälle zählen für alle Länder, die bei Verhängung EU-Mitglied waren. Fälle der UN und anderer Organisationen sind nicht dargestellt.",
+        "cap_world_map": "Grau: Länder mit nur 1–5 Fällen. Fälle der EU und ihrer Vorgängerin, der EWG, zählen für alle Länder, die bei Verhängung Mitglied waren. Fälle der UN und anderer Organisationen sind nicht dargestellt.",
         "h_sender_countries": "Top 15 der sanktionierenden Länder",
-        "cap_senders": "Fälle = eigene Fälle + Fälle als EU-Mitglied. Keine Länder und daher getrennt aufgeführt: EU {eu} Fälle, UN {un} Fälle. Deutschland enthält einen Fall der ehemaligen DDR; ohne ihn teilen sich Deutschland und Frankreich Rang 3 (je 226 Fälle).",
+        "cap_senders": "Fälle = eigene Fälle + Fälle als EU- oder EWG-Mitglied. Keine Länder und daher getrennt aufgeführt: EU {eu} Fälle, UN {un} Fälle. Deutschland enthält einen Fall der ehemaligen DDR; ohne ihn teilen sich Deutschland und Frankreich Rang 3 (je 240 Fälle).",
         "h_eu": "Die EU als Sanktionsakteur",
         "kpi_eu_cases": "EU-Fälle",
         "kpi_eu_rank_help": "Rang {rank} nach den USA",
@@ -231,10 +231,10 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         "kpi_eu_iran": "Gegen den Iran",
         "t_eu_decades": "Neue EU-Fälle pro Jahrzehnt",
         "cap_eu_decades": "Die 2020er umfassen nur 2020–2025.",
-        "t_eu_targets": "Hauptziele der EU-Sanktionen",
+        "t_eu_targets": "Hauptzielländer der EU-Sanktionen",
         "t_eu_instr": "EU-Instrumente im Vergleich zu allen Sanktionen weltweit",
         "txt_germany": (
-            "- **Deutschland** steht weltweit auf Rang {rank} ({cases} Fälle einschließlich EU-Sanktionen) und hat {own} eigene nationale Fälle. "
+            "- **Deutschland** steht weltweit auf Rang {rank} ({cases} Fälle einschließlich EU- und EWG-Sanktionen) und hat {own} eigene nationale Fälle. "
             "Gegen den Iran handelt es über die EU und die E3 (Frankreich, Deutschland, Großbritannien), die 2025 die Rückkehr der UN-Sanktionen ausgelöst haben."
         ),
         "h_compare": "Nicht-westliche Sender im Vergleich",
@@ -254,7 +254,7 @@ Full analysis: `iran_sanctions_analysis.ipynb`
 - Die Ergebnisse sind Bewertungen bei Ende eines Falls, keine gemessenen Wirkungen.
 - Die Daten erfassen, welche Maßnahmen verhängt wurden, nicht ihre wirtschaftlichen oder humanitären Folgen.
 - Für den Iran beginnen die Daten 1979.
-- Auf den Karten zählen EU-Fälle für alle Mitgliedsstaaten; die UN und andere Organisationen sind nicht dargestellt.
+- Auf den Karten zählen EU- und EWG-Fälle für alle Mitgliedsstaaten; die UN und andere Organisationen sind nicht dargestellt.
 
 **Quellen**
 - Felbermayr, G., A. Kirilakha, C. Syropoulos, E. Yalcin, and Y. V. Yotov (2020), "The Global Sanctions Data Base,"
@@ -318,7 +318,7 @@ COLUMN_NAMES = {
         "last_year": "Last year", "peak_year": "Peak year", "peak_decade": "Peak decade",
         "cases_against_iran": "Cases against Iran", "world_rank": "World rank", "ongoing": "Ongoing",
         "against_iran": "Against Iran", "top_targets": "Main targets", "top_objectives": "Main objectives",
-        "own_cases": "Own cases", "via_eu": "As EU member",
+        "own_cases": "Own cases", "via_eu": "As EU/EEC member",
     },
     "de": {
         "year": "Jahr", "cases_in_force": "Fälle in Kraft", "new_cases": "Neue Fälle", "continuing": "Fortlaufend",
@@ -327,8 +327,8 @@ COLUMN_NAMES = {
         "rank": "Rang", "target": "Land", "total_cases": "Fälle gesamt", "first_year": "Erstes Jahr",
         "last_year": "Letztes Jahr", "peak_year": "Spitzenjahr", "peak_decade": "Stärkstes Jahrzehnt",
         "cases_against_iran": "Fälle gegen Iran", "world_rank": "Weltrang", "ongoing": "Laufend",
-        "against_iran": "Gegen Iran", "top_targets": "Hauptziele", "top_objectives": "Hauptgründe",
-        "own_cases": "Eigene Fälle", "via_eu": "Als EU-Mitglied",
+        "against_iran": "Gegen Iran", "top_targets": "Hauptzielländer", "top_objectives": "Häufigste Ziele",
+        "own_cases": "Eigene Fälle", "via_eu": "Als EU-/EWG-Mitglied",
     },
 }
 
@@ -342,6 +342,18 @@ T = TEXT[LANG]
 def lab(value):
     """Translate a category label from the data into the selected language."""
     return LABELS_DE.get(value, value) if LANG == "de" else value
+
+
+def num(value, decimals=0):
+    """Number in the notation of the selected language (1,794.5 / 1.794,5)."""
+    text = f"{value:,.{decimals}f}"
+    if LANG == "de":
+        text = text.replace(",", "X").replace(".", ",").replace("X", ".")
+    return text
+
+
+# Percent sign: German style with a space ("86 %"), English without ("86%")
+PCT = " %" if LANG == "de" else "%"
 
 
 def cols(df):
@@ -398,7 +410,7 @@ def show_chart(fig, height=420):
     )
     fig.update_xaxes(showgrid=False, linecolor="#cccccc")
     fig.update_yaxes(gridcolor="#eeeeee", zeroline=False)
-    st.plotly_chart(fig, use_container_width=True, theme=None)
+    st.plotly_chart(fig, width="stretch", theme=None)
 
 
 def show_map(fig, height=520):
@@ -413,13 +425,13 @@ def show_map(fig, height=520):
         paper_bgcolor="white", font=dict(color="#31333f"),  # fixed light background, independent of dark mode
     )
     fig.update_geos(bgcolor="white")
-    st.plotly_chart(fig, use_container_width=True, theme=None)
+    st.plotly_chart(fig, width="stretch", theme=None)
 
 
 def show_data(df, label=None):
     """Table view of the data behind a chart."""
     with st.expander(label or T["show_data"]):
-        st.dataframe(cols(df), use_container_width=True, hide_index=True)
+        st.dataframe(cols(df), width="stretch", hide_index=True)
 
 
 def comparison_bars(df, label_col, share_col, group_name, x_title):
@@ -432,8 +444,8 @@ def comparison_bars(df, label_col, share_col, group_name, x_title):
         values = data[col] * 100
         fig.add_bar(
             y=data["label"], x=values, orientation="h", name=name, marker_color=color,
-            text=values.round(0).astype(int).astype(str) + "%", textposition="outside",
-            hovertemplate="%{y}: %{x:.0f}% (" + name + ")<extra></extra>",
+            text=values.round(0).astype(int).astype(str) + PCT, textposition="outside",
+            hovertemplate="%{y}: %{x:.0f}" + PCT + " (" + name + ")<extra></extra>",
         )
     fig.update_layout(barmode="group", xaxis_title=x_title, xaxis_range=[0, 108], yaxis_title="",
                       legend_traceorder="reversed")
@@ -442,7 +454,8 @@ def comparison_bars(df, label_col, share_col, group_name, x_title):
 
 def ranked_bars(df, label_col, value_col, highlight=None, x_title=None):
     """Horizontal bars sorted from largest (top) to smallest, optional highlight of one entry."""
-    data = df.sort_values(value_col).copy()
+    # Largest at the top; ties keep the order of the data (alphabetical), read from top to bottom
+    data = df.sort_values(value_col, ascending=False, kind="stable").iloc[::-1].copy()
     colors = [COLOR_MAIN if (highlight is None or v == highlight) else COLOR_WORLD for v in data[label_col]]
     fig = go.Figure(go.Bar(
         y=data[label_col], x=data[value_col], orientation="h", marker_color=colors,
@@ -458,7 +471,7 @@ st.caption(T["intro"] + " " + T["source_r5"])
 
 c1, c2, c3, c4, c5 = st.columns(5)
 c1.metric(T["kpi_cases"], kpis["cases_iran"],
-          help=T["kpi_cases_help"].format(share=kpis["share_iran"], total=kpis["cases_world"]))
+          help=T["kpi_cases_help"].format(share=num(kpis["share_iran"], 1), total=num(kpis["cases_world"])))
 c2.metric(T["kpi_rank"], f"#{kpis['iran_rank_target']}", help=T["kpi_rank_help"])
 c3.metric(T["kpi_force"], kpis["iran_cases_in_force_2025"])
 c4.metric(T["kpi_us"], kpis["iran_cases_by_us"])
@@ -521,8 +534,8 @@ with tab_time:
 
 # ---------------------------------------------------------------- tab: who sanctions Iran
 with tab_senders:
-    iran_senders = load_csv("iran_senders.csv").sort_values("cases", ascending=False)
-    actors = load_csv("iran_sender_actors.csv").sort_values("cases", ascending=False)
+    iran_senders = load_csv("iran_senders.csv").sort_values("cases", ascending=False, kind="stable")
+    actors = load_csv("iran_sender_actors.csv").sort_values("cases", ascending=False, kind="stable")
 
     chart_title(T["t_iran_map"])
     fig = px.choropleth(
@@ -539,7 +552,8 @@ with tab_senders:
     st.caption(T["cap_iran_map"] + " " + T["source_r5"])
 
     chart_title(T["t_actors"])
-    show_chart(ranked_bars(actors.head(10), "sender", "cases"), height=440)
+    top_actors = actors[actors["cases"] >= actors["cases"].iloc[min(9, len(actors) - 1)]]  # top 10 incl. ties
+    show_chart(ranked_bars(top_actors, "sender", "cases"), height=480)
     st.caption(T["cap_actors"] + " " + T["source_r5"])
     show_data(actors, T["data_actors"])
     show_data(iran_senders[["country", "iso3", "cases"]], T["data_map_countries"])
@@ -572,7 +586,7 @@ with tab_instr:
     chart_title(T["t_instr_time"].format(instr=lab(instrument_choice)))
     fig = px.line(data, x="year", y="share", color="group",
                   color_discrete_map={lab("Iran"): COLOR_MAIN, lab("World"): COLOR_WORLD})
-    fig.update_traces(line_width=2, hovertemplate="%{x}: %{y:.0f}%<extra></extra>")
+    fig.update_traces(line_width=2, hovertemplate="%{x}: %{y:.0f}" + PCT + "<extra></extra>")
     for year, key in ((2016, "jcpoa"), (2018, "us_exit")):
         fig.add_vline(x=year, line=dict(color="#bbbbbb", dash="dot", width=1))
         fig.add_annotation(x=year, y=1, yref="paper", text=T[key], showarrow=False, xanchor="left",
@@ -583,7 +597,7 @@ with tab_instr:
 
     show_data(by_period, T["data_instr_period"])
     show_data(subtypes_period, T["data_fin_period"])
-    st.markdown(T["txt_instr"])
+    st.markdown(T["txt_instr"].format(fin=kpis["iran_financial_cases"]))
 
 
 # ---------------------------------------------------------------- tab: objectives & outcomes
@@ -618,8 +632,8 @@ with tab_outcomes:
     for group, color in (("Iran", COLOR_MAIN), ("World", COLOR_WORLD)):
         values = comp[group] * 100
         fig.add_bar(x=[lab(o) for o in comp["outcome"]], y=values, name=lab(group), marker_color=color,
-                    text=values.round(0).astype(int).astype(str) + "%", textposition="outside",
-                    hovertemplate="%{x}: %{y:.0f}%<extra></extra>")
+                    text=values.round(0).astype(int).astype(str) + PCT, textposition="outside",
+                    hovertemplate="%{x}: %{y:.0f}" + PCT + "<extra></extra>")
     fig.update_layout(barmode="group", yaxis_title=T["y_share"], yaxis_range=[0, 70], legend_traceorder="normal")
     show_chart(fig)
     show_data(comp)
@@ -628,16 +642,16 @@ with tab_outcomes:
 
 # ---------------------------------------------------------------- tab: global context
 with tab_global:
-    top_targets = load_csv("top_targets.csv").sort_values("rank")
+    top_targets = load_csv("top_targets.csv").sort_values("rank", kind="stable")
     world = load_csv("world_senders.csv").sort_values("cases", ascending=False)
     eu_decades = load_csv("eu_per_decade.csv")
-    eu_targets = load_csv("eu_top_targets.csv").sort_values("cases", ascending=False)
+    eu_targets = load_csv("eu_top_targets.csv").sort_values("cases", ascending=False, kind="stable")
     eu_instruments = load_csv("eu_instruments.csv")
-    sender_comparison = load_csv("sender_comparison.csv").sort_values("world_rank")
+    sender_comparison = load_csv("sender_comparison.csv").sort_values("world_rank", kind="stable")
 
     st.subheader(T["h_targets"])
     chart_title(T["t_targets"])
-    show_chart(ranked_bars(top_targets.head(10), "target", "total_cases", highlight="Iran"))
+    show_chart(ranked_bars(top_targets[top_targets["rank"] <= 10], "target", "total_cases", highlight="Iran"))
     show_data(top_targets, T["data_targets"])
 
     st.subheader(T["h_world"])
@@ -652,9 +666,9 @@ with tab_global:
     show_map(fig)
     st.caption(T["cap_world_map"] + " " + T["source_r5"])
     chart_title(T["h_sender_countries"])
-    sender_countries = load_csv("top_sender_countries.csv").sort_values("rank")
+    sender_countries = load_csv("top_sender_countries.csv").sort_values("rank", kind="stable")
     st.dataframe(cols(sender_countries[["rank", "country", "cases", "own_cases", "via_eu", "against_iran"]]),
-                 use_container_width=True, hide_index=True)
+                 width="stretch", hide_index=True)
     st.caption(T["cap_senders"].format(eu=kpis["eu_cases"], un=kpis["un_cases"]) + " " + T["source_r5"])
 
     st.subheader(T["h_eu"])
@@ -687,7 +701,7 @@ with tab_global:
 
     st.subheader(T["h_compare"])
     sender_comparison["top_objectives"] = sender_comparison["top_objectives"].map(translate_objective_codes)
-    st.dataframe(cols(sender_comparison), use_container_width=True, hide_index=True)
+    st.dataframe(cols(sender_comparison), width="stretch", hide_index=True)
     st.caption(T["cap_compare"] + " " + T["source_r5"] + " " + T["lang_note"])
 
 

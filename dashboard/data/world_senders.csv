@@ -7,7 +7,7 @@ ARM,27,Armenia,21–50
 AUS,49,Australia,21–50
 AUT,173,Austria,100+
 AZE,2,Azerbaijan,1–5
-BEL,198,Belgium,100+
+BEL,212,Belgium,100+
 BEN,1,Benin,1–5
 BFA,1,Burkina Faso,1–5
 BGR,120,Bulgaria,100+
@@ -29,36 +29,34 @@ COM,1,Comoros,1–5
 CRI,1,Costa Rica,1–5
 CYP,134,Cyprus,100+
 CZE,135,Czechia,100+
-DEU,227,Germany,100+
+DEU,241,Germany,100+
 DJI,2,Djibouti,1–5
-DNK,208,Denmark,100+
+DNK,222,Denmark,100+
 DOM,1,Dominican Republic,1–5
 DZA,6,Algeria,6–20
-EEC,14,not found,6–20
 EGY,4,Egypt,1–5
 ERI,2,Eritrea,1–5
-ESP,201,Spain,100+
+ESP,209,Spain,100+
 EST,135,Estonia,100+
 ETH,1,Ethiopia,1–5
 FIN,176,Finland,100+
-FRA,226,France,100+
-FRY,1,not found,1–5
-GBR,247,United Kingdom,100+
+FRA,240,France,100+
+GBR,261,United Kingdom,100+
 GEO,19,Georgia,6–20
 GMB,1,Gambia,1–5
 GNQ,1,Equatorial Guinea,1–5
-GRC,193,Greece,100+
+GRC,206,Greece,100+
 HKG,5,Hong Kong,1–5
 HND,1,Honduras,1–5
 HRV,115,Croatia,100+
 HUN,131,Hungary,100+
 IDN,4,Indonesia,1–5
 IND,16,India,6–20
-IRL,192,Ireland,100+
+IRL,206,Ireland,100+
 IRN,5,Iran,1–5
 ISL,49,Iceland,21–50
 ISR,5,Israel,1–5
-ITA,198,Italy,100+
+ITA,212,Italy,100+
 JOR,2,Jordan,1–5
 JPN,46,Japan,21–50
 KAZ,1,Kazakhstan,1–5
@@ -71,7 +69,7 @@ LBR,1,Liberia,1–5
 LBY,3,Libya,1–5
 LIE,49,Liechtenstein,21–50
 LTU,136,Lithuania,100+
-LUX,191,Luxembourg,100+
+LUX,205,Luxembourg,100+
 LVA,134,Latvia,100+
 MAR,1,Morocco,1–5
 MCO,1,Monaco,1–5
@@ -86,16 +84,15 @@ MYS,3,Malaysia,1–5
 NER,1,Niger,1–5
 NGA,1,Nigeria,1–5
 NIC,1,Nicaragua,1–5
-NLD,208,Netherlands,100+
+NLD,222,Netherlands,100+
 NOR,62,Norway,51–100
 NRU,1,Nauru,1–5
 NZL,18,New Zealand,6–20
-OIC,1,not found,1–5
 OMN,1,Oman,1–5
 PAK,1,Pakistan,1–5
 PER,1,Peru,1–5
 POL,135,Poland,100+
-PRT,190,Portugal,100+
+PRT,198,Portugal,100+
 QAT,1,Qatar,1–5
 ROU,120,Romania,100+
 RUS,67,Russia,51–100
@@ -104,7 +101,7 @@ SAU,9,Saudi Arabia,6–20
 SDN,1,Sudan,1–5
 SEN,1,Senegal,1–5
 SGP,2,Singapore,1–5
-SRB,29,Serbia,21–50
+SRB,30,Serbia,21–50
 SVK,132,Slovakia,100+
 SVN,132,Slovenia,100+
 SWE,186,Sweden,100+

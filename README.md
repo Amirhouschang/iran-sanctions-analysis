@@ -26,7 +26,7 @@ To run it locally, see [How to run](#how-to-run).
 
 - Trade sanctions are far more common against Iran than worldwide (71% vs. 41% of cases).
 - Financial sanctions rose from one in three new cases (1979–2005) to almost nine in ten (2017–2025).
-- Asset freezes (86%) and bans on financial services (81%) dominate. SWIFT exclusion was used twice, both times by the EU (2012, 2025).
+- Among the 43 financial sanction cases, asset freezes (86%) and bans on financial services (81%) dominate. SWIFT exclusion was used twice, both times by the EU (2012, 2025).
 
 [![Sanction instruments: Iran vs. world](images/instruments.png)](images/instruments.png)
 [![Financial measures: Iran vs. world](images/financial_measures.png)](images/financial_measures.png)
@@ -50,18 +50,19 @@ To run it locally, see [How to run](#how-to-run).
 | 4 | Belarus | 47 |
 | 5 | Myanmar | 42 |
 
-| Rank | Sanctioning countries | Cases | of which as EU member |
+| Rank | Sanctioning countries | Cases | of which as EU/EEC member |
 |---|---|---|---|
 | 1 | United States | 686 | – |
-| 2 | United Kingdom | 247 | 127 |
-| **3** | **Germany** | **227** | **189** |
-| 4 | France | 226 | 189 |
-| 5 | Denmark, Netherlands | 208 each | 190 |
+| 2 | United Kingdom | 261 | 141 |
+| **3** | **Germany** | **241** | **203** |
+| 4 | France | 240 | 203 |
+| 5 | Denmark, Netherlands | 222 each | 204 |
 
+Cases of the EU and of its predecessor, the EEC, are assigned to the countries that were members when the case began.
 The EU (190 cases) and the UN (88 cases) are not countries and are counted separately.
 
 - The **EU** is the second largest sanctioning actor; Iran is among its most sanctioned targets (8 cases).
-- **Germany** ranks third worldwide (227 cases incl. EU sanctions). Against Iran it acts through the EU and the E3,
+- **Germany** ranks third worldwide (241 cases incl. EU and EEC sanctions). Against Iran it acts through the EU and the E3,
   which triggered the return of the UN sanctions in 2025.
 
 **Case counts show recorded sanction episodes, not how severe the sanctions were.**
@@ -89,9 +90,11 @@ requirements.txt
 
 ## How to run
 
-Request the GSDB data and place the files in `GSDB-R5/` and `GSDB-FS/`, then:
+Request the GSDB data and place the files in `GSDB-R5/` and `GSDB-FS/`. `requirements.txt` covers the dashboard;
+the notebook additionally needs matplotlib, country_converter and Jupyter:
 
 ```
+pip install -r requirements.txt matplotlib country_converter notebook
 jupyter notebook iran_sanctions_analysis.ipynb    # run all cells; exports dashboard/data and images
 streamlit run dashboard/app.py
 ```

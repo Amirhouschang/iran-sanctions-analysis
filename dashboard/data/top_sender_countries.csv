@@ -1,16 +1,16 @@
 rank,country,iso3,cases,own_cases,via_eu,against_iran,class
 1,United States,USA,686,686,0,25,100+
-2,United Kingdom,GBR,247,120,127,9,100+
-3,Germany,DEU,227,38,189,8,100+
-4,France,FRA,226,37,189,8,100+
-5,Denmark,DNK,208,18,190,8,100+
-5,Netherlands,NLD,208,18,190,8,100+
-7,Spain,ESP,201,12,189,8,100+
-8,Italy,ITA,198,9,189,8,100+
-8,Belgium,BEL,198,8,190,8,100+
-10,Greece,GRC,193,4,189,8,100+
-11,Ireland,IRL,192,2,190,8,100+
-12,Luxembourg,LUX,191,1,190,8,100+
-13,Portugal,PRT,190,1,189,8,100+
+2,United Kingdom,GBR,261,120,141,9,100+
+3,Germany,DEU,241,38,203,8,100+
+4,France,FRA,240,37,203,8,100+
+5,Denmark,DNK,222,18,204,8,100+
+5,Netherlands,NLD,222,18,204,8,100+
+7,Belgium,BEL,212,8,204,8,100+
+7,Italy,ITA,212,9,203,8,100+
+9,Spain,ESP,209,12,197,8,100+
+10,Greece,GRC,206,4,202,8,100+
+10,Ireland,IRL,206,2,204,8,100+
+12,Luxembourg,LUX,205,1,204,8,100+
+13,Portugal,PRT,198,1,197,8,100+
 14,Sweden,SWE,186,16,170,8,100+
 15,Finland,FIN,176,6,170,8,100+

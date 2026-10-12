@@ -1,46 +1,46 @@
 iso3,cases,country
 USA,25,United States
 GBR,9,United Kingdom
+AUT,8,Austria
 BEL,8,Belgium
 BGR,8,Bulgaria
-AUT,8,Austria
-DNK,8,Denmark
+CAN,8,Canada
+CYP,8,Cyprus
 CZE,8,Czechia
 DEU,8,Germany
-FRA,8,France
+DNK,8,Denmark
 ESP,8,Spain
+EST,8,Estonia
 FIN,8,Finland
-CYP,8,Cyprus
-CAN,8,Canada
-SWE,8,Sweden
-SVN,8,Slovenia
-POL,8,Poland
-SVK,8,Slovakia
-ROU,8,Romania
+FRA,8,France
 GRC,8,Greece
 HUN,8,Hungary
-EST,8,Estonia
-LTU,8,Lithuania
+IRL,8,Ireland
 ITA,8,Italy
+LTU,8,Lithuania
 LUX,8,Luxembourg
-PRT,8,Portugal
+LVA,8,Latvia
 MLT,8,Malta
 NLD,8,Netherlands
-LVA,8,Latvia
-IRL,8,Ireland
+POL,8,Poland
+PRT,8,Portugal
+ROU,8,Romania
+SVK,8,Slovakia
+SVN,8,Slovenia
+SWE,8,Sweden
 HRV,6,Croatia
 AUS,4,Australia
+ISL,3,Iceland
+LIE,3,Liechtenstein
 MDA,3,Moldova
 MKD,3,North Macedonia
 MNE,3,Montenegro
 NOR,3,Norway
-ISL,3,Iceland
-LIE,3,Liechtenstein
-NZL,2,New Zealand
-CHE,2,Switzerland
-BIH,2,Bosnia and Herzegovina
 ALB,2,Albania
-UKR,2,Ukraine
+BIH,2,Bosnia and Herzegovina
+CHE,2,Switzerland
 KOR,2,South Korea
+NZL,2,New Zealand
+UKR,2,Ukraine
 DJI,1,Djibouti
 JPN,1,Japan

@@ -14,7 +14,7 @@ Zum lokalen Starten siehe [Ausführen](#ausführen).
 
 ### 1. Wie haben sich die Sanktionen gegen den Iran entwickelt, und wer hat sie verhängt?
 
-- Der Iran ist das **zweitmeist sanktionierte Land** der Welt: 62 Fälle seit 1979, nach Russland (75).
+- Der Iran ist das **am zweithäufigsten sanktionierte Land** der Welt: 62 Fälle seit 1979, nach Russland (75).
 - 1979–2005: meist 1–3 Fälle in Kraft, keiner 1982–1983; alle von den USA.
 - 2006–2016: starker Anstieg im Atomstreit (UN, EU und andere), Höchststand von 25 Fällen 2016; Rückgang auf 8 nach dem JCPOA.
 - 2018–2025: erneuter Anstieg nach dem US-Ausstieg, Höchststand von **36 Fällen in Kraft im Jahr 2025**.
@@ -26,7 +26,7 @@ Zum lokalen Starten siehe [Ausführen](#ausführen).
 
 - Handelssanktionen sind gegen den Iran viel häufiger als weltweit (71 % gegenüber 41 % der Fälle).
 - Finanzsanktionen stiegen von jedem dritten neuen Fall (1979–2005) auf fast neun von zehn (2017–2025).
-- Vermögenssperren (86 %) und Verbote von Finanzdienstleistungen (81 %) dominieren. Einen SWIFT-Ausschluss gab es zweimal, beide Male durch die EU (2012, 2025).
+- Unter den 43 Fällen mit Finanzsanktionen dominieren Vermögenssperren (86 %) und Verbote von Finanzdienstleistungen (81 %). Einen SWIFT-Ausschluss gab es zweimal, beide Male durch die EU (2012, 2025).
 
 [![Sanktionsinstrumente: Iran im Vergleich zur Welt](images/instruments.png)](images/instruments.png)
 [![Finanzmaßnahmen: Iran im Vergleich zur Welt](images/financial_measures.png)](images/financial_measures.png)
@@ -38,11 +38,11 @@ Zum lokalen Starten siehe [Ausführen](#ausführen).
 - 14 von 17 Zielen zum Atomprogramm gelten als „voller Erfolg“. Das sind fast nur die 2016 durch das JCPOA aufgehobenen Sanktionen,
   die die USA (2018) und die UN (2025) wieder verhängt haben.
 
-[![Ergebnisse beendeter Fälle nach Begründung](images/outcomes.png)](images/outcomes.png)
+[![Ergebnisse beendeter Fälle nach Ziel](images/outcomes.png)](images/outcomes.png)
 
 ### 4. Wie steht der Iran im weltweiten Vergleich da?
 
-| Rang | Meistsanktionierte Länder | Fälle |
+| Rang | Am häufigsten sanktionierte Länder | Fälle |
 |---|---|---|
 | 1 | Russland | 75 |
 | **2** | **Iran** | **62** |
@@ -50,18 +50,19 @@ Zum lokalen Starten siehe [Ausführen](#ausführen).
 | 4 | Belarus | 47 |
 | 5 | Myanmar | 42 |
 
-| Rang | Sanktionierende Länder | Fälle | davon als EU-Mitglied |
+| Rang | Sanktionierende Länder | Fälle | davon als EU-/EWG-Mitglied |
 |---|---|---|---|
 | 1 | USA | 686 | – |
-| 2 | Großbritannien | 247 | 127 |
-| **3** | **Deutschland** | **227** | **189** |
-| 4 | Frankreich | 226 | 189 |
-| 5 | Dänemark, Niederlande | je 208 | 190 |
+| 2 | Großbritannien | 261 | 141 |
+| **3** | **Deutschland** | **241** | **203** |
+| 4 | Frankreich | 240 | 203 |
+| 5 | Dänemark, Niederlande | je 222 | 204 |
 
+Fälle der EU und ihrer Vorgängerin, der EWG, zählen für alle Länder, die bei Beginn des Falls Mitglied waren.
 Die EU (190 Fälle) und die UN (88 Fälle) sind keine Länder und werden getrennt gezählt.
 
-- Die **EU** ist der zweitgrößte Sanktionsakteur; der Iran gehört zu ihren meistsanktionierten Zielen (8 Fälle).
-- **Deutschland** steht weltweit auf Rang 3 (227 Fälle einschließlich EU-Sanktionen). Gegen den Iran handelt es über die EU und die E3,
+- Die **EU** ist der zweitgrößte Sanktionsakteur; der Iran gehört zu den Ländern, gegen die sie am häufigsten Sanktionen verhängt hat (8 Fälle).
+- **Deutschland** steht weltweit auf Rang 3 (241 Fälle einschließlich EU- und EWG-Sanktionen). Gegen den Iran handelt es über die EU und die E3,
   die 2025 die Rückkehr der UN-Sanktionen ausgelöst haben.
 
 **Fallzahlen zeigen erfasste Sanktionsepisoden, nicht die Härte der Sanktionen.**
@@ -89,9 +90,11 @@ requirements.txt
 
 ## Ausführen
 
-GSDB-Daten anfragen und die Dateien in `GSDB-R5/` und `GSDB-FS/` ablegen, dann:
+GSDB-Daten anfragen und die Dateien in `GSDB-R5/` und `GSDB-FS/` ablegen. `requirements.txt` enthält die Pakete für das Dashboard;
+das Notebook braucht zusätzlich matplotlib, country_converter und Jupyter:
 
 ```
+pip install -r requirements.txt matplotlib country_converter notebook
 jupyter notebook iran_sanctions_analysis.ipynb    # alle Zellen ausführen; exportiert dashboard/data und images
 streamlit run dashboard/app.py
 ```
