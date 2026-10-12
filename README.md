@@ -7,7 +7,7 @@ based on the Global Sanctions Data Base (GSDB): who imposed sanctions, with whic
 
 ## Interactive dashboard
 
-The Streamlit dashboard shows all results interactively, in English and German.
+**[Open the dashboard](https://iran-sanctions-analysis.streamlit.app/)**: all results interactively, in English and German.
 To run it locally, see [How to run](#how-to-run).
 
 ## Questions and findings

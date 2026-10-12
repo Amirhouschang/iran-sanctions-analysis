@@ -7,7 +7,7 @@ auf Grundlage der Global Sanctions Data Base (GSDB): wer Sanktionen verhängt ha
 
 ## Interaktives Dashboard
 
-Das Streamlit-Dashboard zeigt alle Ergebnisse interaktiv, auf Deutsch und Englisch.
+**[Dashboard öffnen](https://iran-sanctions-analysis.streamlit.app/)**: alle Ergebnisse interaktiv, auf Deutsch und Englisch.
 Zum lokalen Starten siehe [Ausführen](#ausführen).
 
 ## Fragen und Ergebnisse
