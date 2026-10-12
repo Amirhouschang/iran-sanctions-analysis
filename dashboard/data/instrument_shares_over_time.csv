@@ -1,0 +1,241 @@
+year,instrument,share,group
+2006,Trade,100.0,Iran
+2007,Trade,71.4,Iran
+2008,Trade,66.7,Iran
+2009,Trade,66.7,Iran
+2010,Trade,69.2,Iran
+2011,Trade,68.8,Iran
+2012,Trade,70.0,Iran
+2013,Trade,70.0,Iran
+2014,Trade,70.0,Iran
+2015,Trade,70.0,Iran
+2016,Trade,68.0,Iran
+2017,Trade,37.5,Iran
+2018,Trade,50.0,Iran
+2019,Trade,50.0,Iran
+2020,Trade,50.0,Iran
+2021,Trade,58.3,Iran
+2022,Trade,63.2,Iran
+2023,Trade,64.3,Iran
+2024,Trade,64.5,Iran
+2025,Trade,69.4,Iran
+2006,Financial,40.0,Iran
+2007,Financial,28.6,Iran
+2008,Financial,33.3,Iran
+2009,Financial,33.3,Iran
+2010,Financial,38.5,Iran
+2011,Financial,43.8,Iran
+2012,Financial,50.0,Iran
+2013,Financial,55.0,Iran
+2014,Financial,55.0,Iran
+2015,Financial,55.0,Iran
+2016,Financial,52.0,Iran
+2017,Financial,37.5,Iran
+2018,Financial,40.0,Iran
+2019,Financial,50.0,Iran
+2020,Financial,58.3,Iran
+2021,Financial,66.7,Iran
+2022,Financial,78.9,Iran
+2023,Financial,82.1,Iran
+2024,Financial,87.1,Iran
+2025,Financial,88.9,Iran
+2006,Travel,20.0,Iran
+2007,Travel,14.3,Iran
+2008,Travel,33.3,Iran
+2009,Travel,33.3,Iran
+2010,Travel,23.1,Iran
+2011,Travel,31.2,Iran
+2012,Travel,25.0,Iran
+2013,Travel,25.0,Iran
+2014,Travel,25.0,Iran
+2015,Travel,25.0,Iran
+2016,Travel,28.0,Iran
+2017,Travel,25.0,Iran
+2018,Travel,30.0,Iran
+2019,Travel,33.3,Iran
+2020,Travel,41.7,Iran
+2021,Travel,41.7,Iran
+2022,Travel,52.6,Iran
+2023,Travel,53.6,Iran
+2024,Travel,54.8,Iran
+2025,Travel,55.6,Iran
+2006,Arms,20.0,Iran
+2007,Arms,42.9,Iran
+2008,Arms,44.4,Iran
+2009,Arms,44.4,Iran
+2010,Arms,46.2,Iran
+2011,Arms,37.5,Iran
+2012,Arms,30.0,Iran
+2013,Arms,30.0,Iran
+2014,Arms,30.0,Iran
+2015,Arms,30.0,Iran
+2016,Arms,32.0,Iran
+2017,Arms,37.5,Iran
+2018,Arms,30.0,Iran
+2019,Arms,25.0,Iran
+2020,Arms,25.0,Iran
+2021,Arms,25.0,Iran
+2022,Arms,15.8,Iran
+2023,Arms,10.7,Iran
+2024,Arms,9.7,Iran
+2025,Arms,13.9,Iran
+2006,Military assistance,0.0,Iran
+2007,Military assistance,0.0,Iran
+2008,Military assistance,11.1,Iran
+2009,Military assistance,11.1,Iran
+2010,Military assistance,15.4,Iran
+2011,Military assistance,12.5,Iran
+2012,Military assistance,10.0,Iran
+2013,Military assistance,10.0,Iran
+2014,Military assistance,10.0,Iran
+2015,Military assistance,10.0,Iran
+2016,Military assistance,16.0,Iran
+2017,Military assistance,37.5,Iran
+2018,Military assistance,30.0,Iran
+2019,Military assistance,25.0,Iran
+2020,Military assistance,25.0,Iran
+2021,Military assistance,25.0,Iran
+2022,Military assistance,15.8,Iran
+2023,Military assistance,10.7,Iran
+2024,Military assistance,9.7,Iran
+2025,Military assistance,11.1,Iran
+2006,Other,0.0,Iran
+2007,Other,0.0,Iran
+2008,Other,0.0,Iran
+2009,Other,0.0,Iran
+2010,Other,7.7,Iran
+2011,Other,6.2,Iran
+2012,Other,15.0,Iran
+2013,Other,15.0,Iran
+2014,Other,15.0,Iran
+2015,Other,15.0,Iran
+2016,Other,16.0,Iran
+2017,Other,12.5,Iran
+2018,Other,10.0,Iran
+2019,Other,8.3,Iran
+2020,Other,8.3,Iran
+2021,Other,8.3,Iran
+2022,Other,5.3,Iran
+2023,Other,7.1,Iran
+2024,Other,3.2,Iran
+2025,Other,8.3,Iran
+2006,Trade,38.7,World
+2007,Trade,36.6,World
+2008,Trade,37.0,World
+2009,Trade,36.0,World
+2010,Trade,40.1,World
+2011,Trade,42.8,World
+2012,Trade,41.7,World
+2013,Trade,44.2,World
+2014,Trade,46.0,World
+2015,Trade,48.1,World
+2016,Trade,48.3,World
+2017,Trade,42.4,World
+2018,Trade,44.0,World
+2019,Trade,41.7,World
+2020,Trade,42.5,World
+2021,Trade,42.1,World
+2022,Trade,45.9,World
+2023,Trade,45.2,World
+2024,Trade,47.1,World
+2025,Trade,48.2,World
+2006,Financial,50.3,World
+2007,Financial,52.9,World
+2008,Financial,53.2,World
+2009,Financial,54.1,World
+2010,Financial,53.8,World
+2011,Financial,61.4,World
+2012,Financial,63.3,World
+2013,Financial,62.2,World
+2014,Financial,63.1,World
+2015,Financial,63.2,World
+2016,Financial,62.4,World
+2017,Financial,60.8,World
+2018,Financial,64.2,World
+2019,Financial,67.3,World
+2020,Financial,68.1,World
+2021,Financial,68.8,World
+2022,Financial,72.1,World
+2023,Financial,72.2,World
+2024,Financial,73.2,World
+2025,Financial,73.3,World
+2006,Travel,32.3,World
+2007,Travel,32.7,World
+2008,Travel,35.1,World
+2009,Travel,37.8,World
+2010,Travel,35.7,World
+2011,Travel,36.3,World
+2012,Travel,34.6,World
+2013,Travel,32.5,World
+2014,Travel,35.4,World
+2015,Travel,37.2,World
+2016,Travel,38.0,World
+2017,Travel,42.0,World
+2018,Travel,42.8,World
+2019,Travel,42.8,World
+2020,Travel,46.2,World
+2021,Travel,50.1,World
+2022,Travel,48.8,World
+2023,Travel,47.4,World
+2024,Travel,47.7,World
+2025,Travel,48.9,World
+2006,Arms,33.5,World
+2007,Arms,35.9,World
+2008,Arms,37.7,World
+2009,Arms,36.0,World
+2010,Arms,36.3,World
+2011,Arms,34.9,World
+2012,Arms,32.1,World
+2013,Arms,32.1,World
+2014,Arms,31.8,World
+2015,Arms,32.9,World
+2016,Arms,32.3,World
+2017,Arms,30.2,World
+2018,Arms,29.2,World
+2019,Arms,27.3,World
+2020,Arms,24.4,World
+2021,Arms,22.5,World
+2022,Arms,18.4,World
+2023,Arms,15.3,World
+2024,Arms,13.0,World
+2025,Arms,12.2,World
+2006,Military assistance,28.4,World
+2007,Military assistance,26.8,World
+2008,Military assistance,28.6,World
+2009,Military assistance,26.7,World
+2010,Military assistance,25.8,World
+2011,Military assistance,26.5,World
+2012,Military assistance,27.5,World
+2013,Military assistance,26.1,World
+2014,Military assistance,23.7,World
+2015,Military assistance,24.0,World
+2016,Military assistance,24.3,World
+2017,Military assistance,24.5,World
+2018,Military assistance,22.2,World
+2019,Military assistance,19.1,World
+2020,Military assistance,17.2,World
+2021,Military assistance,17.4,World
+2022,Military assistance,14.5,World
+2023,Military assistance,12.5,World
+2024,Military assistance,10.6,World
+2025,Military assistance,9.7,World
+2006,Other,12.9,World
+2007,Other,14.4,World
+2008,Other,16.2,World
+2009,Other,19.2,World
+2010,Other,20.3,World
+2011,Other,19.1,World
+2012,Other,18.3,World
+2013,Other,16.9,World
+2014,Other,15.3,World
+2015,Other,13.2,World
+2016,Other,12.9,World
+2017,Other,14.7,World
+2018,Other,13.6,World
+2019,Other,11.9,World
+2020,Other,10.9,World
+2021,Other,11.1,World
+2022,Other,13.0,World
+2023,Other,13.1,World
+2024,Other,12.3,World
+2025,Other,12.0,World

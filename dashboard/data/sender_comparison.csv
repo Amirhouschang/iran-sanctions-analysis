@@ -1,0 +1,7 @@
+country,world_rank,cases,first_year,last_year,peak_year,ongoing,against_iran,top_targets,top_objectives
+China,45,27,1967,2025,2021,16,0,"United States (5), Canada (3), Taiwan (3)","policy_change (20), human_rights (2), other (2)"
+Russia,31,67,1950,2025,2022,30,0,"Australia (5), Ukraine (5), United Kingdom (5)","policy_change (52), other (8), territorial_conflict (4)"
+Saudi Arabia,54,9,1990,2025,1990,2,0,"Lebanon (2), Palestine (1), Yemen, North (1)","policy_change (4), terrorism (4), democracy (1)"
+India,50,16,1949,2025,1954,2,0,"Pakistan (5), Portugal (5), Nepal (4)","territorial_conflict (6), democracy (4), policy_change (3)"
+Turkey,47,26,1985,2024,2011,13,0,"Afghanistan (5), Somalia (3), Sudan (2)","end_war (15), human_rights (13), terrorism (6)"
+Iran,58,5,1952,2023,2022,3,0,"United Kingdom (1), Argentina (1), Canada (1)","policy_change (4), terrorism (4)"

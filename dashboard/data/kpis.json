@@ -1,0 +1,20 @@
+{
+  "cases_world": 1794,
+  "cases_iran": 62,
+  "share_iran": 3.5,
+  "iran_rank_target": 2,
+  "iran_first_year": 1979,
+  "iran_ongoing": 36,
+  "iran_ended": 26,
+  "iran_cases_in_force_2025": 36,
+  "iran_cases_by_us": 25,
+  "iran_cases_by_eu": 8,
+  "iran_financial_cases": 43,
+  "eu_cases": 190,
+  "un_cases": 88,
+  "eu_rank": 2,
+  "eu_ongoing": 92,
+  "germany_rank": 3,
+  "germany_cases_incl_eu": 227,
+  "germany_own_cases": 37
+}
