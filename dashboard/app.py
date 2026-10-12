@@ -16,7 +16,7 @@ import streamlit as st
 
 DATA_DIR = Path(__file__).parent / "data"
 
-# Colours (same as in the notebook)
+# Colours (as in the notebook, except COLOR_WORLD: #bdbdbd there)
 COLOR_MAIN = "#1f4e79"    # Iran / main series
 COLOR_LIGHT = "#6fa8dc"   # secondary series
 COLOR_WORLD = "#9e9e9e"   # comparison: all sanctions worldwide
@@ -51,15 +51,16 @@ TEXT = {
         "t_timeline": "Sanction cases against Iran in force per year",
         "cases_in_force": "Cases in force",
         "years_new": "Years with new cases",
-        "cap_timeline": "Line: cases in force in each year (ongoing cases counted up to 2025). Red points: years with new cases; the label shows how many. Case counts reflect recorded episodes, not the severity of sanctions.",
+        "cap_timeline": "Line: cases in force at any time during the year (ongoing cases counted up to 2025). Red points: years with new cases; the label shows how many. Case counts reflect recorded episodes, not the severity of sanctions.",
         "t_new_cont": "New vs. continuing cases per year",
         "continuing": "Continuing from earlier years",
         "new": "New in this year",
         "cap_new_cont": "No case was in force in 1982–1983.",
         "txt_time": (
             "- **1979–2005:** mostly 1–3 cases in force, none in 1982–1983; all imposed by the US.\n"
-            "- **2006–2016:** strong increase during the nuclear dispute, peak of 25 cases in 2016.\n"
-            "- **2017:** drop to 8 cases after the JCPOA was implemented.\n"
+            "- **2006–2015:** strong increase during the nuclear dispute, up to 20 cases in force (2012–2015).\n"
+            "- **2016:** in January, when the JCPOA was implemented, 13 cases ended; at the end of 2016 only 7 were in force. "
+            "The chart shows 25 for 2016 because it counts every case in force at any time during the year.\n"
             "- **2018–2025:** new increase after the US withdrawal, highest level of 36 cases in 2025."
         ),
         # senders
@@ -86,7 +87,7 @@ TEXT = {
         "txt_instr": (
             "- **Trade** sanctions are far more common against Iran than worldwide (71% vs. 41%).\n"
             "- **Financial** sanctions rose from one in three new cases (1979–2005) to almost nine in ten (2017–2025).\n"
-            "- Among the {fin} financial sanction cases, **asset freezes** (86%) and **bans on financial services** (81%) dominate; SWIFT exclusion was used twice, both by the EU (2012, 2025)."
+            "- Among the {fin} financial sanction cases, **asset freezes** (86%) and **bans on financial services** (81%) dominate; restrictions on payment infrastructure (e.g. SWIFT) are recorded in only two cases, both by the EU (2012, 2025)."
         ),
         # outcomes
         "kpi_ended": "Cases ended / still in force (end of 2025)",
@@ -96,8 +97,9 @@ TEXT = {
         "t_outcome_comp": "Share of outcomes: Iran vs. all sanctions worldwide",
         "txt_outcomes": (
             "- **Terrorism and human rights:** all 10 assessed objectives failed.\n"
-            "- **Nuclear:** 14 of 17 objectives are coded as full success. These are almost all sanctions lifted under the JCPOA "
-            "in 2016, which were reimposed by the US (2018) and the UN (2025); the rating should be read with caution."
+            "- **Nuclear / threat to peace:** 14 of 17 objectives are coded as full success, i.e. Iran fully accepted the demands. "
+            "13 of them ended in January–May 2016, after the JCPOA was implemented; one ended in 2020. The rating is made when a case ends "
+            "and should be read with caution: the US (2018), the UN and the EU (both 2025) imposed sanctions again."
         ),
         # global
         "h_targets": "Most sanctioned countries",
@@ -119,11 +121,11 @@ TEXT = {
         "t_eu_targets": "Main targets of EU sanctions",
         "t_eu_instr": "EU instruments vs. all sanctions worldwide",
         "txt_germany": (
-            "- **Germany** ranks #{rank} worldwide ({cases} cases incl. EU and EEC sanctions) and has {own} national cases of its own. "
+            "- **Germany** ranks #{rank} worldwide ({cases} cases incl. EU and EEC sanctions) and has {own} national cases of its own (plus one case of the former GDR). "
             "Against Iran it acts through the EU and the E3 (France, Germany, UK), which triggered the return of the UN sanctions in 2025."
         ),
         "h_compare": "Non-Western senders compared",
-        "cap_compare": "None of these countries appears as a sender of a case against Iran; UN cases are counted separately. Russia includes the Soviet Union.",
+        "cap_compare": "None of these countries appears as a sender of a case against Iran; UN cases are counted separately. Russia includes the Soviet Union. Main targets and objectives: the three most frequent; ties at rank 3 are cut alphabetically.",
         "cases": "Cases",
         "new_cases": "New cases",
         "lang_note": "Country names are shown as in the source data (English).",
@@ -137,6 +139,8 @@ TEXT = {
 **Limitations**
 - Case counts are not a measure of severity: a comprehensive embargo counts as one case, a step-by-step escalation as several.
 - Outcome ratings are assessments made when a case ends, not measured effects.
+- End dates are GSDB codings: an ended case does not always mean the sanctions ended (e.g. the EU human-rights sanctions against Iran
+  from 2011 are coded as ended in 2016, although the EU has extended them every year).
 - The data records which measures were imposed, not their economic or humanitarian impact.
 - Coverage for Iran starts in 1979.
 - On the maps, EU and EEC cases are assigned to all member states; the UN and other organisations are not shown.
@@ -170,15 +174,16 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         "t_timeline": "Sanktionsfälle gegen den Iran in Kraft pro Jahr",
         "cases_in_force": "Fälle in Kraft",
         "years_new": "Jahre mit neuen Fällen",
-        "cap_timeline": "Linie: Fälle in Kraft pro Jahr (laufende Fälle bis 2025 gezählt). Rote Punkte: Jahre mit neuen Fällen; die Zahl zeigt, wie viele. Fallzahlen zeigen erfasste Episoden, nicht die Härte der Sanktionen.",
+        "cap_timeline": "Linie: Fälle, die im jeweiligen Jahr zumindest zeitweise in Kraft waren (laufende Fälle bis 2025 gezählt). Rote Punkte: Jahre mit neuen Fällen; die Zahl zeigt, wie viele. Fallzahlen zeigen erfasste Episoden, nicht die Härte der Sanktionen.",
         "t_new_cont": "Neue und fortlaufende Fälle pro Jahr",
         "continuing": "Fortlaufend aus früheren Jahren",
         "new": "Neu in diesem Jahr",
         "cap_new_cont": "1982–1983 war kein Fall in Kraft.",
         "txt_time": (
             "- **1979–2005:** meist 1–3 Fälle in Kraft, keiner 1982–1983; alle von den USA.\n"
-            "- **2006–2016:** starker Anstieg im Atomstreit, Höchststand von 25 Fällen 2016.\n"
-            "- **2017:** Rückgang auf 8 Fälle nach Umsetzung des Atomabkommens (JCPOA).\n"
+            "- **2006–2015:** starker Anstieg im Atomstreit, bis zu 20 Fälle in Kraft (2012–2015).\n"
+            "- **2016:** Mit der Umsetzung des Atomabkommens (JCPOA) im Januar endeten 13 Fälle; Ende 2016 waren nur noch 7 in Kraft. "
+            "Die Grafik zeigt für 2016 25 Fälle, weil sie jeden Fall zählt, der im Jahr zumindest zeitweise in Kraft war.\n"
             "- **2018–2025:** erneuter Anstieg nach dem US-Ausstieg, Höchststand von 36 Fällen 2025."
         ),
         "t_iran_map": "Länder mit Sanktionen gegen den Iran, Anzahl der Fälle 1979–2025",
@@ -193,7 +198,7 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         "t_fin": "Finanzmaßnahmen: Iran im Vergleich zu allen Finanzsanktionen",
         "x_fin": "Anteil der Finanzsanktionsfälle mit dieser Maßnahme (%)",
         "select_instr": "Instrument im Zeitverlauf",
-        "t_instr_time": "{instr}: Anteil der laufenden Fälle mit diesem Instrument, 2006–2025",
+        "t_instr_time": "{instr}: Anteil der Fälle in Kraft mit diesem Instrument, 2006–2025",
         "y_share": "Anteil (%)",
         "cap_instr_time": "Beginnt 2006: Davor liefen nur 1–3 Iran-Fälle, zu wenige für aussagekräftige Anteile. Gepunktete Linien: Umsetzung des JCPOA (2016), US-Ausstieg (2018).",
         "jcpoa": "JCPOA umgesetzt",
@@ -203,7 +208,7 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         "txt_instr": (
             "- **Handelssanktionen** sind gegen den Iran viel häufiger als weltweit (71 % gegenüber 41 %).\n"
             "- **Finanzsanktionen** stiegen von jedem dritten neuen Fall (1979–2005) auf fast neun von zehn (2017–2025).\n"
-            "- Unter den {fin} Fällen mit Finanzsanktionen dominieren **Vermögenssperren** (86 %) und **Verbote von Finanzdienstleistungen** (81 %); einen SWIFT-Ausschluss gab es zweimal, beide Male durch die EU (2012, 2025)."
+            "- Unter den {fin} Fällen mit Finanzsanktionen dominieren **Vermögenssperren** (86 %) und **Verbote von Finanzdienstleistungen** (81 %); Beschränkungen der Zahlungsinfrastruktur (z. B. SWIFT) sind nur in zwei Fällen erfasst, beide durch die EU (2012, 2025)."
         ),
         "kpi_ended": "Fälle beendet / noch in Kraft (Ende 2025)",
         "t_outcomes": "Ergebnisse beendeter Fälle nach Ziel",
@@ -212,8 +217,9 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         "t_outcome_comp": "Anteil der Ergebnisse: Iran im Vergleich zu allen Sanktionen weltweit",
         "txt_outcomes": (
             "- **Terrorismus und Menschenrechte:** alle 10 bewerteten Ziele gescheitert.\n"
-            "- **Atomprogramm:** 14 von 17 Zielen gelten als voller Erfolg. Das sind fast nur die 2016 durch das JCPOA aufgehobenen "
-            "Sanktionen, die die USA (2018) und die UN (2025) wieder verhängt haben; die Bewertung ist mit Vorsicht zu lesen."
+            "- **Atomprogramm / Friedensbedrohung:** 14 von 17 Zielen gelten als voller Erfolg, d. h. der Iran hat die Forderungen vollständig angenommen. "
+            "13 davon endeten im Januar–Mai 2016 nach der Umsetzung des JCPOA, einer 2020. Die Bewertung erfolgt bei Fallende "
+            "und ist mit Vorsicht zu lesen: Die USA (2018), die UN und die EU (beide 2025) haben erneut Sanktionen verhängt."
         ),
         "h_targets": "Die am häufigsten sanktionierten Länder",
         "t_targets": "Top 10 der sanktionierten Länder, 1949–2025",
@@ -234,11 +240,11 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         "t_eu_targets": "Hauptzielländer der EU-Sanktionen",
         "t_eu_instr": "EU-Instrumente im Vergleich zu allen Sanktionen weltweit",
         "txt_germany": (
-            "- **Deutschland** steht weltweit auf Rang {rank} ({cases} Fälle einschließlich EU- und EWG-Sanktionen) und hat {own} eigene nationale Fälle. "
+            "- **Deutschland** steht weltweit auf Rang {rank} ({cases} Fälle einschließlich EU- und EWG-Sanktionen) und hat {own} eigene nationale Fälle (dazu ein Fall der ehemaligen DDR). "
             "Gegen den Iran handelt es über die EU und die E3 (Frankreich, Deutschland, Großbritannien), die 2025 die Rückkehr der UN-Sanktionen ausgelöst haben."
         ),
         "h_compare": "Nicht-westliche Sender im Vergleich",
-        "cap_compare": "Keines dieser Länder ist als Sender eines Falls gegen den Iran erfasst; UN-Fälle werden getrennt gezählt. Russland einschließlich Sowjetunion.",
+        "cap_compare": "Keines dieser Länder ist als Sender eines Falls gegen den Iran erfasst; UN-Fälle werden getrennt gezählt. Russland einschließlich Sowjetunion. Hauptzielländer und häufigste Ziele: jeweils die drei häufigsten; bei Gleichstand auf Rang 3 alphabetisch gekürzt.",
         "cases": "Fälle",
         "new_cases": "Neue Fälle",
         "lang_note": "Ländernamen wie in den Quelldaten (Englisch).",
@@ -252,6 +258,8 @@ Full analysis: `iran_sanctions_analysis.ipynb`
 **Grenzen der Analyse**
 - Fallzahlen messen nicht die Härte: Ein umfassendes Embargo zählt als ein Fall, eine schrittweise Verschärfung als mehrere.
 - Die Ergebnisse sind Bewertungen bei Ende eines Falls, keine gemessenen Wirkungen.
+- Enddaten sind Kodierungen der GSDB: Ein beendeter Fall heißt nicht immer, dass die Sanktionen endeten (z. B. gelten die EU-Menschenrechtssanktionen
+  gegen den Iran von 2011 als 2016 beendet, obwohl die EU sie jedes Jahr verlängert hat).
 - Die Daten erfassen, welche Maßnahmen verhängt wurden, nicht ihre wirtschaftlichen oder humanitären Folgen.
 - Für den Iran beginnen die Daten 1979.
 - Auf den Karten zählen EU- und EWG-Fälle für alle Mitgliedsstaaten; die UN und andere Organisationen sind nicht dargestellt.

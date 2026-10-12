@@ -27,8 +27,8 @@ COD,1,DR Congo,1–5
 COL,3,Colombia,1–5
 COM,1,Comoros,1–5
 CRI,1,Costa Rica,1–5
-CYP,134,Cyprus,100+
-CZE,135,Czechia,100+
+CYP,133,Cyprus,100+
+CZE,134,Czechia,100+
 DEU,241,Germany,100+
 DJI,2,Djibouti,1–5
 DNK,222,Denmark,100+
@@ -37,7 +37,7 @@ DZA,6,Algeria,6–20
 EGY,4,Egypt,1–5
 ERI,2,Eritrea,1–5
 ESP,209,Spain,100+
-EST,135,Estonia,100+
+EST,134,Estonia,100+
 ETH,1,Ethiopia,1–5
 FIN,176,Finland,100+
 FRA,240,France,100+
@@ -49,7 +49,7 @@ GRC,206,Greece,100+
 HKG,5,Hong Kong,1–5
 HND,1,Honduras,1–5
 HRV,115,Croatia,100+
-HUN,131,Hungary,100+
+HUN,130,Hungary,100+
 IDN,4,Indonesia,1–5
 IND,16,India,6–20
 IRL,206,Ireland,100+
@@ -68,16 +68,16 @@ KWT,2,Kuwait,1–5
 LBR,1,Liberia,1–5
 LBY,3,Libya,1–5
 LIE,49,Liechtenstein,21–50
-LTU,136,Lithuania,100+
+LTU,135,Lithuania,100+
 LUX,205,Luxembourg,100+
-LVA,134,Latvia,100+
+LVA,133,Latvia,100+
 MAR,1,Morocco,1–5
 MCO,1,Monaco,1–5
 MDA,38,Moldova,21–50
 MDV,2,Maldives,1–5
 MEX,3,Mexico,1–5
 MKD,46,North Macedonia,21–50
-MLT,132,Malta,100+
+MLT,131,Malta,100+
 MNE,47,Montenegro,21–50
 MRT,1,Mauritania,1–5
 MYS,3,Malaysia,1–5
@@ -91,7 +91,7 @@ NZL,18,New Zealand,6–20
 OMN,1,Oman,1–5
 PAK,1,Pakistan,1–5
 PER,1,Peru,1–5
-POL,135,Poland,100+
+POL,134,Poland,100+
 PRT,198,Portugal,100+
 QAT,1,Qatar,1–5
 ROU,120,Romania,100+
@@ -102,8 +102,8 @@ SDN,1,Sudan,1–5
 SEN,1,Senegal,1–5
 SGP,2,Singapore,1–5
 SRB,30,Serbia,21–50
-SVK,132,Slovakia,100+
-SVN,132,Slovenia,100+
+SVK,131,Slovakia,100+
+SVN,131,Slovenia,100+
 SWE,186,Sweden,100+
 SYR,1,Syria,1–5
 TCD,1,Chad,1–5
