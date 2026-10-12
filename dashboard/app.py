@@ -392,7 +392,9 @@ def show_chart(fig, height=420):
         margin=dict(l=10, r=10, t=30, b=10),
         legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0, title_text=""),
         hoverlabel=dict(bgcolor="white"),
-        font=dict(size=12),
+        font=dict(size=12, color="#31333f"),
+        paper_bgcolor="white",   # fixed light background, independent of dark mode
+        plot_bgcolor="white",
     )
     fig.update_xaxes(showgrid=False, linecolor="#cccccc")
     fig.update_yaxes(gridcolor="#eeeeee", zeroline=False)
@@ -406,7 +408,11 @@ def show_map(fig, height=520):
         showland=True, landcolor=LAND_COLOR, showcountries=True, countrycolor="white",
         lataxis_range=[-58, 90],
     )
-    fig.update_layout(template="plotly_white", height=height, margin=dict(l=0, r=0, t=10, b=0))
+    fig.update_layout(
+        template="plotly_white", height=height, margin=dict(l=0, r=0, t=10, b=0),
+        paper_bgcolor="white", font=dict(color="#31333f"),  # fixed light background, independent of dark mode
+    )
+    fig.update_geos(bgcolor="white")
     st.plotly_chart(fig, use_container_width=True, theme=None)
 
 
