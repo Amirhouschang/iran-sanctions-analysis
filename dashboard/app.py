@@ -149,7 +149,7 @@ TEXT = {
 - Felbermayr, G., A. Kirilakha, C. Syropoulos, E. Yalcin, and Y. V. Yotov (2020), "The Global Sanctions Data Base,"
   *European Economic Review*, 129, 103561.
 - Yotov, Y. V., G. Felbermayr, H. Kariem, A. Kirilakha, O. Kwon, C. Syropoulos, and E. Yalcin (2026),
-  "Financial Sanctions and International Trade: Evidence from a New Database," Working Paper 2026014,
+  "Financial Sanctions and International Trade: Insights from New Data," Working Papers 2026014,
   Center for Global Policy Analysis, LeBow College of Business, Drexel University.
 
 Full analysis: `iran_sanctions_analysis.ipynb`
@@ -268,7 +268,7 @@ Full analysis: `iran_sanctions_analysis.ipynb`
 - Felbermayr, G., A. Kirilakha, C. Syropoulos, E. Yalcin, and Y. V. Yotov (2020), "The Global Sanctions Data Base,"
   *European Economic Review*, 129, 103561.
 - Yotov, Y. V., G. Felbermayr, H. Kariem, A. Kirilakha, O. Kwon, C. Syropoulos, and E. Yalcin (2026),
-  "Financial Sanctions and International Trade: Evidence from a New Database," Working Paper 2026014,
+  "Financial Sanctions and International Trade: Insights from New Data," Working Papers 2026014,
   Center for Global Policy Analysis, LeBow College of Business, Drexel University.
 
 Vollständige Analyse: `iran_sanctions_analysis.ipynb`
