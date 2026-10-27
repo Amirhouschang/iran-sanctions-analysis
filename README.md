@@ -1,128 +1,182 @@
-# Sanctions against Iran, 1979–2025
+# Sanktionen gegen den Iran, 1979–2025
 
-🇩🇪 [Deutsche Version](README.de.md)
+🇬🇧 [English version](README.en.md)
 
-Analysis of all recorded sanction cases against Iran and their place in global sanction activity,
-based on the Global Sanctions Data Base (GSDB): who imposed sanctions, with which instruments, for which reasons, and with what result.
+Analyse der Sanktionen gegen den Iran auf zwei Ebenen:
 
-## Interactive dashboard
+- **Sanktionsfälle (GSDB):** alle erfassten Sanktionsfälle gegen den Iran seit 1979 und ihre Einordnung in das weltweite Sanktionsgeschehen: wer Sanktionen verhängt hat, mit welchen Instrumenten, aus welchen Gründen und mit welchem Ergebnis.
+- **Betroffene (OpenSanctions):** welche iranischen Firmen, Personen, Organisationen und Schiffe heute auf Sanktionslisten stehen, in welchen Sektoren und mit welchen Ämtern.
 
-**[Open the dashboard](https://iran-sanctions-analysis.streamlit.app/)**: all results interactively, in English and German.
-To run it locally, see [How to run](#how-to-run).
+## Interaktives Dashboard
 
-## Questions and findings
+**[Dashboard öffnen](https://iran-sanctions-analysis.streamlit.app/)**: alle Ergebnisse interaktiv, auf Deutsch und Englisch, mit Suche und Filtern für die gelisteten Entitäten.
+Zum lokalen Starten siehe [Ausführen](#ausführen).
 
-### 1. How did sanctions against Iran develop, and who imposed them?
+## Teil 1: Sanktionsfälle (GSDB)
 
-- Iran is the **second most sanctioned country** in the world: 62 cases since 1979, after Russia (75).
-- 1979–2005: mostly 1–3 cases in force, none in 1982–1983; all imposed by the US.
-- 2006–2015: strong increase during the nuclear dispute (UN, EU and others), up to 20 cases in force in 2012–2015.
-- 2016: when the nuclear agreement (JCPOA) was implemented in January 2016, 13 cases ended; at the end of 2016 only 7 were still in force.
-  The chart counts every case in force at any time during a year, so it shows 25 for 2016 and the drop only in 2017.
-- 2018–2025: new increase after the US withdrawal, highest level of **36 cases in force in 2025**.
-- The US imposed 25 of the 62 cases. China, Russia, India, Saudi Arabia and Turkey do not appear as senders of any case against Iran (UN cases are counted separately).
+### 1. Wie haben sich die Sanktionen gegen den Iran entwickelt, und wer hat sie verhängt?
 
-[![Sanction cases against Iran in force per year](images/timeline.png)](images/timeline.png)
+- Der Iran ist das **am zweithäufigsten sanktionierte Land** der Welt: 62 Fälle seit 1979, nach Russland (75).
+- 1979–2005: meist 1–3 Fälle in Kraft, keiner 1982–1983; alle von den USA.
+- 2006–2015: starker Anstieg im Atomstreit (UN, EU und andere), bis zu 20 Fälle in Kraft (2012–2015).
+- 2016: Mit der Umsetzung des Atomabkommens (JCPOA) im Januar 2016 endeten 13 Fälle; Ende 2016 waren nur noch 7 in Kraft.
+  Die Grafik zählt jeden Fall, der in einem Jahr zumindest zeitweise in Kraft war; deshalb zeigt sie für 2016 25 Fälle und den Rückgang erst 2017.
+- 2018–2025: erneuter Anstieg nach dem US-Ausstieg, Höchststand von **36 Fällen in Kraft im Jahr 2025**.
+- Die USA haben 25 der 62 Fälle verhängt. China, Russland, Indien, Saudi-Arabien und die Türkei sind nicht als Sender eines Falls gegen den Iran erfasst (UN-Fälle werden getrennt gezählt).
 
-### 2. Which instruments were used?
+[![Sanktionsfälle gegen den Iran in Kraft pro Jahr](images/timeline_de.png)](images/timeline_de.png)
 
-- Trade sanctions are far more common against Iran than worldwide (71% vs. 41% of cases).
-- Financial sanctions rose from one in three new cases (1979–2005) to almost nine in ten (2017–2025).
-- Among the 43 financial sanction cases, asset freezes (86%) and bans on financial services (81%) dominate. Restrictions on payment infrastructure (e.g. SWIFT) are recorded in only two cases, both by the EU (2012, 2025).
+### 2. Welche Instrumente wurden eingesetzt?
 
-[![Sanction instruments: Iran vs. world](images/instruments.png)](images/instruments.png)
-[![Financial measures: Iran vs. world](images/financial_measures.png)](images/financial_measures.png)
+- Handelssanktionen sind gegen den Iran viel häufiger als weltweit (71 % gegenüber 41 % der Fälle).
+- Finanzsanktionen stiegen von jedem dritten neuen Fall (1979–2005) auf fast neun von zehn (2017–2025).
+- Unter den 43 Fällen mit Finanzsanktionen dominieren Vermögenssperren (86 %) und Verbote von Finanzdienstleistungen (81 %). Beschränkungen der Zahlungsinfrastruktur (z. B. SWIFT) sind nur in zwei Fällen erfasst, beide durch die EU (2012, 2025).
 
-### 3. Why were sanctions imposed, and how did they end?
+[![Sanktionsinstrumente: Iran im Vergleich zur Welt](images/instruments_de.png)](images/instruments_de.png)
+[![Finanzmaßnahmen: Iran im Vergleich zur Welt](images/financial_measures_de.png)](images/financial_measures_de.png)
 
-- Declared objectives (a case can have several): nuclear / threat to peace 24, policy change 16, human rights 15, terrorism 14, other objectives 8.
-- At the end of 2025, 36 of 62 cases are still in force.
-- All 10 assessed objectives on terrorism and human rights **failed**.
-- Nuclear / threat to peace: 14 of 17 assessed objectives are coded as "full success", i.e. Iran fully accepted the demands.
-  13 of them belong to cases that ended in January–May 2016, after the JCPOA was implemented; one ended in 2020.
-  The rating is made when a case ends and should be read with caution: the dispute was not resolved,
-  and the US (2018), the UN and the EU (both 2025) imposed sanctions again.
+### 3. Warum wurden Sanktionen verhängt, und wie endeten sie?
 
-[![Outcomes of ended cases by objective](images/outcomes.png)](images/outcomes.png)
+- Erklärte Ziele (ein Fall kann mehrere haben): Atomprogramm / Friedensbedrohung 24, Politikwechsel 16, Menschenrechte 15, Terrorismus 14, sonstige Ziele 8.
+- Ende 2025 sind 36 der 62 Fälle noch in Kraft.
+- Alle 10 bewerteten Ziele zu Terrorismus und Menschenrechten sind **gescheitert**.
+- Atomprogramm / Friedensbedrohung: 14 von 17 bewerteten Zielen gelten als „voller Erfolg“, d. h. der Iran hat die Forderungen vollständig angenommen.
+  13 davon gehören zu Fällen, die im Januar–Mai 2016 nach der Umsetzung des JCPOA endeten; einer endete 2020.
+  Die Bewertung erfolgt bei Fallende und ist mit Vorsicht zu lesen: Der Streit war nicht gelöst,
+  und die USA (2018), die UN und die EU (beide 2025) haben erneut Sanktionen verhängt.
 
-### 4. How does Iran compare globally?
+[![Ergebnisse beendeter Fälle nach Ziel](images/outcomes_de.png)](images/outcomes_de.png)
 
-| Rank | Most sanctioned countries | Cases |
+### 4. Wie steht der Iran im weltweiten Vergleich da?
+
+| Rang | Am häufigsten sanktionierte Länder | Fälle |
 |---|---|---|
-| 1 | Russia | 75 |
+| 1 | Russland | 75 |
 | **2** | **Iran** | **62** |
 | 3 | China | 57 |
 | 4 | Belarus | 47 |
 | 5 | Myanmar | 42 |
 
-| Rank | Sanctioning countries | Cases | of which as EU/EEC member |
+| Rang | Sanktionierende Länder | Fälle | davon als EU-/EWG-Mitglied |
 |---|---|---|---|
-| 1 | United States | 686 | – |
-| 2 | United Kingdom | 261 | 141 |
-| **3** | **Germany** | **241** | **203** |
-| 4 | France | 240 | 203 |
-| 5 | Denmark, Netherlands | 222 each | 204 |
+| 1 | USA | 686 | – |
+| 2 | Großbritannien | 261 | 141 |
+| **3** | **Deutschland** | **241** | **203** |
+| 4 | Frankreich | 240 | 203 |
+| 5 | Dänemark, Niederlande | je 222 | 204 |
 
-Cases of the EU and of its predecessor, the EEC, are assigned to the countries that were members when the case began.
-The EU (190 cases) and the UN (88 cases) are not countries and are counted separately.
-Germany's 241 cases include one case of the former GDR; without it, Germany and France share rank 3 with 240 cases each.
+Fälle der EU und ihrer Vorgängerin, der EWG, zählen für alle Länder, die bei Beginn des Falls Mitglied waren.
+Die EU (190 Fälle) und die UN (88 Fälle) sind keine Länder und werden getrennt gezählt.
+Die 241 Fälle Deutschlands enthalten einen Fall der ehemaligen DDR; ohne ihn teilen sich Deutschland und Frankreich mit je 240 Fällen Rang 3.
 
-- Counted as a single actor, the **EU** is the second largest sanctioning actor after the US (190 vs. 686 cases; the UK has 120 cases of its own).
-  Iran is among its most sanctioned targets: 8 cases, rank 3 together with Myanmar, after Belarus (12) and Russia (11).
-- **Germany** ranks third worldwide (241 cases incl. EU and EEC sanctions). Against Iran it acts through the EU and the E3,
-  which triggered the return of the UN sanctions in 2025.
+- Als ein Akteur gezählt, ist die **EU** nach den USA der zweitgrößte Sanktionsakteur (190 gegenüber 686 Fällen; Großbritannien hat 120 eigene Fälle).
+  Der Iran gehört zu den Ländern, gegen die sie am häufigsten Sanktionen verhängt hat: 8 Fälle, Rang 3 gemeinsam mit Myanmar, nach Belarus (12) und Russland (11).
+- **Deutschland** steht weltweit auf Rang 3 (241 Fälle einschließlich EU- und EWG-Sanktionen). Gegen den Iran handelt es über die EU und die E3,
+  die 2025 die Rückkehr der UN-Sanktionen ausgelöst haben.
 
-**Case counts show recorded sanction episodes, not how severe the sanctions were.**
+**Fallzahlen zeigen erfasste Sanktionsepisoden, nicht die Härte der Sanktionen.**
 
-## Data sources
+## Teil 2: Wer ist betroffen? (OpenSanctions)
 
-| Data | Source | Period |
+Stand 27.10.2026, gefiltert auf den Ländercode `ir`. Hier werden einzelne gelistete Entitäten gezählt, keine Sanktionsfälle.
+
+### 5. Wer sanktioniert iranische Entitäten?
+
+- 4.972 iranische Einträge in OpenSanctions, davon **2.840 sanktioniert** (1.316 Personen, 1.323 Firmen und Organisationen, 201 Schiffe).
+  Die übrigen sind vor allem politisch exponierte Personen (PEPs) ohne Sanktion.
+- Die **USA** sanktionieren 2.242 der 2.840 Entitäten (79 %), danach folgen EU (728), Ukraine (608), Großbritannien (577) und Kanada (495).
+- Nur 400 Entitäten stehen auf Listen der USA und der EU; 328 sanktioniert die EU ohne US-Gegenstück.
+- Die USA listen fast alle Schiffe (199 von 201); EU, Ukraine und Großbritannien sanktionieren überwiegend Personen.
+
+[![Sanktionierte iranische Entitäten je Akteur](opensanctions/images/opensanctions_akteure_de.png)](opensanctions/images/opensanctions_akteure_de.png)
+
+### 6. Welche Bereiche und Ämter sind betroffen?
+
+- Sektoren der sanktionierten Firmen, Organisationen und Schiffe: am häufigsten Schifffahrt (278), Energie (162, vor allem Öl und Petrochemie) und Banken/Finanzen (139).
+  Nuklear (82), Rüstung (69) und IRGC (40) ergeben zusammen 191 Einträge.
+- Ämter der Personen: Sanktioniert sind vor allem Militär und IRGC (226), Geheimdienst und Sicherheitskräfte (116) und Justiz (100), jeweils zu über 90 %.
+  Parlamentsabgeordnete (4 %), Mitglieder des Expertenrats (7 %) und Diplomaten (8 %) sind kaum sanktioniert.
+- Sanktionen treffen also gezielt den Sicherheits-, Justiz- und Rüstungsapparat und kaum die gewählten oder repräsentativen Institutionen.
+
+## Datenquellen
+
+| Daten | Quelle | Zeitraum |
 |---|---|---|
-| Sanction cases worldwide (GSDB-R5) | Felbermayr et al. (2020), *The Global Sanctions Data Base*, European Economic Review 129 | 1949–2025 |
-| Financial sanction types (GSDB-FS) | Yotov et al. (2026), *Financial Sanctions and International Trade*, CGPA Working Paper 2026014, Drexel University | 1950–2025 |
+| Sanktionsfälle weltweit (GSDB-R5) | Felbermayr et al. (2020), *The Global Sanctions Data Base*, European Economic Review 129 | 1949–2025 |
+| Arten von Finanzsanktionen (GSDB-FS) | Yotov et al. (2026), *Financial Sanctions and International Trade*, CGPA Working Paper 2026014, Drexel University | 1950–2025 |
+| Gelistete Entitäten und Ämter | OpenSanctions (2026), *Default Dataset* (`targets.simple.csv`, `targets.nested.json`), [opensanctions.org](https://www.opensanctions.org/), Lizenz CC BY-NC 4.0 | Stand 27.10.2026 |
 
-The GSDB is available on request at [globalsanctionsdatabase.com/data](https://www.globalsanctionsdatabase.com/data/).
-Commercial use and redistribution are not permitted, so the raw data is not included here. The dashboard uses only aggregated tables (counts and shares).
+Die GSDB ist auf Anfrage unter [globalsanctionsdatabase.com/data](https://www.globalsanctionsdatabase.com/data/) erhältlich.
+Kommerzielle Nutzung und Weitergabe sind nicht erlaubt, deshalb sind die GSDB-Rohdaten hier nicht enthalten. Das Dashboard nutzt für die GSDB nur aggregierte Tabellen (Zählungen und Anteile).
 
-## Project structure
+OpenSanctions ist für nicht-kommerzielle Nutzung frei. Im Repository liegen nur die aufbereiteten Iran-Tabellen, ohne Geburtsdaten, Adressen, Telefonnummern, E-Mails und Ausweisnummern.
+
+## Projektstruktur
 
 ```
-iran_sanctions_analysis.ipynb   analysis: data checks, charts, interpretation, limitations, sources
-README.de.md                    German version of this README
+iran_sanctions_analysis.ipynb          Teil 1 (GSDB): Datenprüfung, Diagramme, Interpretation, Limitations, Quellen
+README.en.md                           englische Version dieses README
 dashboard/
-    app.py                      Streamlit dashboard (English / German)
-    data/                       aggregated tables exported by the notebook
-images/                         charts for this README
-.streamlit/config.toml          dashboard theme (light)
+    app.py                             Streamlit-Dashboard (Deutsch / Englisch)
+    data/                              vom GSDB-Notebook exportierte aggregierte Tabellen
+images/                                Diagramme Teil 1: <name>.png (Englisch), <name>_de.png (Deutsch), Karten als .html
+opensanctions/
+    01_load_opensanctions_iran.py      lädt OpenSanctions und filtert auf den Iran
+    02_opensanctions_iran_analysis.ipynb   Teil 2: Kategorien, Akteure, Sektoren, Ämter, Export
+    03_load_opensanctions_positions.py lädt die Ämter aus targets.nested.json
+    data/                              aufbereitete Tabellen für das Dashboard
+    images/                            Diagramme Teil 2 (Deutsch und Englisch)
+.streamlit/config.toml                 Dashboard-Design (hell)
 requirements.txt
 ```
 
-## How to run
+## Ausführen
 
-Request the GSDB data and save the files as `GSDB-R5/GSDB-R5.csv` and `GSDB-FS/GSDB-FS.csv` in the project folder. `requirements.txt` covers the dashboard;
-the notebook additionally needs matplotlib, country_converter and Jupyter:
+**Teil 1 (GSDB):** GSDB-Daten anfragen und die Dateien als `GSDB-R5/GSDB-R5.csv` und `GSDB-FS/GSDB-FS.csv` im Projektordner speichern. `requirements.txt` enthält die Pakete für das Dashboard;
+das Notebook braucht zusätzlich matplotlib, country_converter und Jupyter:
 
 ```
 pip install -r requirements.txt matplotlib country_converter notebook
-jupyter notebook iran_sanctions_analysis.ipynb    # run all cells; exports dashboard/data and images
+jupyter notebook iran_sanctions_analysis.ipynb    # alle Zellen ausführen; exportiert dashboard/data und images
+```
+
+**Teil 2 (OpenSanctions):** im Ordner `opensanctions/` (lädt die Daten direkt von OpenSanctions, mehrere GB):
+
+```
+python 01_load_opensanctions_iran.py
+python 03_load_opensanctions_positions.py
+jupyter notebook 02_opensanctions_iran_analysis.ipynb    # alle Zellen ausführen; exportiert opensanctions/data
+```
+
+**Dashboard:**
+
+```
 streamlit run dashboard/app.py
 ```
 
-## Limitations
+## Grenzen
 
-- Case counts are not a measure of severity: a comprehensive embargo counts as one case, a step-by-step escalation as several.
-- Outcome ratings are assessments made when a case ends, based on government statements and press reports.
-- End dates are GSDB codings: an ended case does not always mean the sanctions ended. For example, the EU human-rights sanctions
-  against Iran from 2011 are coded as ended in 2016, although the EU has extended this regime every year ([Council of the EU, 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/03/30/human-rights-in-iran-council-extends-sanctions-regime-until-april-2027/)).
-- The data records which measures were imposed, not their economic or humanitarian impact.
-- For Iran, the data starts in 1979.
+**Teil 1 (GSDB)**
+- Fallzahlen messen nicht die Härte: Ein umfassendes Embargo zählt als ein Fall, eine schrittweise Verschärfung als mehrere.
+- Die Ergebnisse sind Bewertungen bei Ende eines Falls, auf Grundlage von Regierungsangaben und Presseberichten.
+- Enddaten sind Kodierungen der GSDB: Ein beendeter Fall heißt nicht immer, dass die Sanktionen endeten. So gelten die EU-Menschenrechtssanktionen
+  gegen den Iran von 2011 in den Daten als 2016 beendet, obwohl die EU dieses Regime jedes Jahr verlängert hat ([Rat der EU, 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/03/30/human-rights-in-iran-council-extends-sanctions-regime-until-april-2027/)).
+- Die Daten erfassen, welche Maßnahmen verhängt wurden, nicht ihre wirtschaftlichen oder humanitären Folgen.
+- Für den Iran beginnen die Daten 1979.
 
-## How this project was made
+**Teil 2 (OpenSanctions)**
+- Momentaufnahme vom 27.10.2026; OpenSanctions wird mehrmals täglich aktualisiert. Ein Sanktionsdatum ist nicht enthalten, eine zeitliche Entwicklung lässt sich daher nicht ableiten.
+- Gefiltert wurde auf den Ländercode `ir`. Entitäten mit Iran-Bezug, die nur einem anderen Land zugeordnet sind (z. B. Tarnfirmen in den VAE), fehlen.
+- Kategorien, Sektoren und Amtsgruppen sind eine eigene Zuordnung über Schlüsselwörter, keine amtliche Branchen- oder Amtsangabe; einzelne Fehlzuordnungen sind möglich, 16 % der Firmen, Organisationen und Schiffe bleiben ohne Sektor.
+- Die PEP-Daten aus Wikidata enthalten auch ehemalige Amtsträger.
 
-I chose the questions, the data and the methods, and checked the results against the data and the GSDB codebooks.
-AI (Claude) helped with writing code and texts. How I work with AI: [local-ai-workflow](https://github.com/Amirhouschang/local-ai-workflow)
+## Wie dieses Projekt entstanden ist
 
-## Rights
+Fragen, Daten und Methoden habe ich ausgewählt und die Ergebnisse an den Daten, den GSDB-Codebooks und der Dokumentation von OpenSanctions geprüft.
+KI (Claude) hat beim Schreiben von Code und Texten geholfen. Wie ich mit KI arbeite: [local-ai-workflow](https://github.com/Amirhouschang/local-ai-workflow)
 
-© 2026 Amirhoushang Rahmannejad. All rights reserved. Code, texts and charts may be viewed and checked, but not copied or reused.
-Feedback is welcome via issues. The GSDB data belongs to the GSDB team at Drexel University.
+## Rechte
+
+© 2026 Amirhoushang Rahmannejad. Alle Rechte vorbehalten. Code, Texte und Diagramme dürfen angesehen und geprüft, aber nicht kopiert oder weiterverwendet werden.
+Feedback gern über Issues. Die GSDB-Daten gehören dem GSDB-Team der Drexel University.
+Die OpenSanctions-Daten in `opensanctions/data/` stammen von OpenSanctions und stehen unter der Lizenz [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
