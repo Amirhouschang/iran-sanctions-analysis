@@ -1,7 +1,9 @@
 """Streamlit dashboard: Sanctions against Iran, 1979–2025 (English / Deutsch).
 
 Reads only the aggregated tables exported by iran_sanctions_analysis.ipynb (section 9),
-so no individual GSDB sanction cases are included. Start with:
+so no individual GSDB sanction cases are included. The tab "Who is targeted" reads the
+OpenSanctions tables exported by opensanctions/02_opensanctions_iran_analysis.ipynb (section 17).
+Start with:
 
     streamlit run dashboard/app.py
 """
@@ -15,6 +17,9 @@ import plotly.graph_objects as go
 import streamlit as st
 
 DATA_DIR = Path(__file__).parent / "data"
+OS_DIR = Path(__file__).parent.parent / "opensanctions" / "data"
+OS_FILE = OS_DIR / "opensanctions_iran_dashboard_2026-10-27.csv"
+OS_ACTORS_FILE = OS_DIR / "opensanctions_iran_akteure_2026-10-27.csv"
 
 # Colours (as in the notebook, except COLOR_WORLD: #bdbdbd there)
 COLOR_MAIN = "#1f4e79"    # Iran / main series
@@ -45,7 +50,33 @@ TEXT = {
         "kpi_force": "Cases in force, end of 2025",
         "kpi_us": "Imposed by the US",
         "kpi_eu": "Imposed by the EU",
-        "tabs": ["Over time", "Who sanctions Iran", "Instruments", "Objectives & outcomes", "Global context", "About the data"],
+        "tabs": ["Over time", "Who sanctions Iran", "Instruments", "Objectives & outcomes", "Global context",
+                 "Who is targeted", "About the data"],
+        # who is targeted (OpenSanctions)
+        "os_intro": "Which Iranian companies, persons, organisations and vessels are on sanctions lists today? "
+                    "Data: OpenSanctions, snapshot of 27 Oct 2026. Unlike the GSDB tabs, this tab counts individual "
+                    "listed entities, not sanction cases.",
+        "os_no_data": "No OpenSanctions data found. Run opensanctions/02_opensanctions_iran_analysis.ipynb first (section 17).",
+        "os_kpi_all": "Iranian entries", "os_kpi_all_help": "Incl. politically exposed persons (PEPs) and others without sanctions",
+        "os_kpi_sanc": "Sanctioned", "os_kpi_persons": "Sanctioned persons", "os_kpi_firms": "Sanctioned companies & organisations",
+        "os_kpi_vessels": "Sanctioned vessels",
+        "os_t_actors": "Sanctioned Iranian entities per actor",
+        "os_cap_actors": "An entity sanctioned by several actors counts once for each. SECO = Switzerland.",
+        "os_h_overlap": "US and EU listings",
+        "os_only_us": "Only USA", "os_only_eu": "Only EU", "os_both": "USA and EU", "os_neither": "Neither USA nor EU",
+        "os_t_sectors": "Sanctioned companies, organisations and vessels by sector",
+        "os_cap_sectors": "Sectors are assigned by keywords in names, aliases and listing reasons, not by an official industry code. "
+                          "{n} entities ({p}) could not be assigned and are not shown.",
+        "os_t_offices": "Persons by office group: sanctioned vs. politically exposed persons (PEPs) without sanctions",
+        "os_sanctioned": "Sanctioned", "os_pep_only": "PEP, not sanctioned",
+        "os_cap_offices": "Offices from OpenSanctions (many languages), grouped by keywords. A person with offices in several groups counts in each. "
+                          "PEP data from Wikidata includes former office holders.",
+        "os_h_search": "Search and filter",
+        "os_search": "Name contains", "os_f_type": "Type", "os_f_cat": "Category", "os_f_sector": "Sector", "os_f_actor": "Sanctioned by",
+        "os_rows": "{n} entries",
+        "os_cap_table": "Entries in category \"PEP only\" or \"Other\" are not sanctioned; they appear in OpenSanctions as politically exposed persons or via other sources. "
+                        "Contact data, dates of birth and ID numbers are not included.",
+        "os_source": "Data: OpenSanctions (opensanctions.org), licence CC BY-NC 4.0, snapshot 27 Oct 2026.",
         # over time
         "show_events": "Show key events",
         "t_timeline": "Sanction cases against Iran in force per year",
@@ -152,7 +183,17 @@ TEXT = {
   "Financial Sanctions and International Trade: Insights from New Data," Working Papers 2026014,
   Center for Global Policy Analysis, LeBow College of Business, Drexel University.
 
-Full analysis: `iran_sanctions_analysis.ipynb`
+- OpenSanctions (2026): *OpenSanctions Default Dataset*, files `targets.simple.csv` and `targets.nested.json`,
+  retrieved 27 Oct 2026, [opensanctions.org](https://www.opensanctions.org/), licence CC BY-NC 4.0 (tab "Who is targeted").
+
+**Tab "Who is targeted" (OpenSanctions)**
+- Snapshot of 27 Oct 2026; OpenSanctions is updated several times a day. Filtered on country code `ir`.
+- Besides sanctions, OpenSanctions contains politically exposed persons (PEPs), export controls and reference data;
+  categories, sectors and office groups are the author's own keyword-based classification.
+
+Full analysis: `iran_sanctions_analysis.ipynb` and `opensanctions/02_opensanctions_iran_analysis.ipynb`
+
+Analysis: Amirhoushang Rahmannejad, [github.com/Amirhouschang](https://github.com/Amirhouschang)
 """,
     },
     "de": {
@@ -169,7 +210,32 @@ Full analysis: `iran_sanctions_analysis.ipynb`
         "kpi_force": "Fälle in Kraft, Ende 2025",
         "kpi_us": "Von den USA verhängt",
         "kpi_eu": "Von der EU verhängt",
-        "tabs": ["Zeitverlauf", "Wer sanktioniert den Iran", "Instrumente", "Ziele & Ergebnisse", "Weltweiter Vergleich", "Über die Daten"],
+        "tabs": ["Zeitverlauf", "Wer sanktioniert den Iran", "Instrumente", "Ziele & Ergebnisse", "Weltweiter Vergleich",
+                 "Wer ist betroffen", "Über die Daten"],
+        "os_intro": "Welche iranischen Firmen, Personen, Organisationen und Schiffe stehen heute auf Sanktionslisten? "
+                    "Daten: OpenSanctions, Stand 27.10.2026. Anders als in den GSDB-Tabs werden hier einzelne gelistete "
+                    "Entitäten gezählt, keine Sanktionsfälle.",
+        "os_no_data": "Keine OpenSanctions-Daten gefunden. Zuerst opensanctions/02_opensanctions_iran_analysis.ipynb ausführen (Abschnitt 17).",
+        "os_kpi_all": "Iranische Einträge", "os_kpi_all_help": "Einschließlich politisch exponierter Personen (PEPs) und anderer ohne Sanktion",
+        "os_kpi_sanc": "Sanktioniert", "os_kpi_persons": "Sanktionierte Personen", "os_kpi_firms": "Sanktionierte Firmen & Organisationen",
+        "os_kpi_vessels": "Sanktionierte Schiffe",
+        "os_t_actors": "Sanktionierte iranische Entitäten je Akteur",
+        "os_cap_actors": "Eine Entität, die von mehreren Akteuren sanktioniert ist, zählt bei jedem einmal.",
+        "os_h_overlap": "Listungen von USA und EU",
+        "os_only_us": "Nur USA", "os_only_eu": "Nur EU", "os_both": "USA und EU", "os_neither": "Weder USA noch EU",
+        "os_t_sectors": "Sanktionierte Firmen, Organisationen und Schiffe nach Sektor",
+        "os_cap_sectors": "Sektoren werden über Schlüsselwörter in Namen, Aliasen und Sanktionsbegründungen bestimmt, nicht über eine amtliche Branchenangabe. "
+                          "{n} Entitäten ({p}) waren nicht zuordenbar und sind nicht dargestellt.",
+        "os_t_offices": "Personen nach Amtsgruppe: sanktioniert und politisch exponierte Personen (PEPs) ohne Sanktion",
+        "os_sanctioned": "Sanktioniert", "os_pep_only": "PEP, nicht sanktioniert",
+        "os_cap_offices": "Ämter aus OpenSanctions (viele Sprachen), über Schlüsselwörter zu Gruppen zusammengefasst. Eine Person mit Ämtern in mehreren Gruppen zählt in jeder. "
+                          "Die PEP-Daten aus Wikidata enthalten auch ehemalige Amtsträger.",
+        "os_h_search": "Suchen und filtern",
+        "os_search": "Name enthält", "os_f_type": "Typ", "os_f_cat": "Kategorie", "os_f_sector": "Sektor", "os_f_actor": "Sanktioniert von",
+        "os_rows": "{n} Einträge",
+        "os_cap_table": "Einträge der Kategorien „Nur PEP“ und „Sonstiges“ sind nicht sanktioniert; sie stehen als politisch exponierte Personen oder über andere Quellen in OpenSanctions. "
+                        "Kontaktdaten, Geburtsdaten und Ausweisnummern sind nicht enthalten.",
+        "os_source": "Daten: OpenSanctions (opensanctions.org), Lizenz CC BY-NC 4.0, Stand 27.10.2026.",
         "show_events": "Wichtige Ereignisse anzeigen",
         "t_timeline": "Sanktionsfälle gegen den Iran in Kraft pro Jahr",
         "cases_in_force": "Fälle in Kraft",
@@ -271,7 +337,17 @@ Full analysis: `iran_sanctions_analysis.ipynb`
   "Financial Sanctions and International Trade: Insights from New Data," Working Papers 2026014,
   Center for Global Policy Analysis, LeBow College of Business, Drexel University.
 
-Vollständige Analyse: `iran_sanctions_analysis.ipynb`
+- OpenSanctions (2026): *OpenSanctions Default Dataset*, Dateien `targets.simple.csv` und `targets.nested.json`,
+  abgerufen am 27.10.2026, [opensanctions.org](https://www.opensanctions.org/), Lizenz CC BY-NC 4.0 (Tab „Wer ist betroffen“).
+
+**Tab „Wer ist betroffen“ (OpenSanctions)**
+- Stand 27.10.2026; OpenSanctions wird mehrmals täglich aktualisiert. Gefiltert auf den Ländercode `ir`.
+- Neben Sanktionen enthält OpenSanctions politisch exponierte Personen (PEPs), Exportkontrollen und Referenzdaten;
+  Kategorien, Sektoren und Amtsgruppen sind eine eigene Zuordnung über Schlüsselwörter.
+
+Vollständige Analyse: `iran_sanctions_analysis.ipynb` und `opensanctions/02_opensanctions_iran_analysis.ipynb`
+
+Analyse: Amirhoushang Rahmannejad, [github.com/Amirhouschang](https://github.com/Amirhouschang)
 """,
     },
 }
@@ -295,6 +371,40 @@ LABELS_DE = {
     "Territorial conflict": "Territorialkonflikt",
     # groups
     "Iran": "Iran", "World": "Welt", "EU": "EU",
+}
+
+# OpenSanctions tables use German labels; English translation for the English view
+OS_LABELS_EN = {
+    # categories
+    "Sanktioniert": "Sanctioned", "Nur PEP": "PEP only", "Nur Exportkontrolle": "Export control only", "Sonstiges": "Other",
+    # entity types
+    "Firma": "Company", "Person": "Person", "Organisation": "Organisation", "Rechtsträger": "Legal entity", "Schiff": "Vessel",
+    # actors
+    "USA": "United States", "EU": "EU", "Ukraine": "Ukraine", "Großbritannien": "United Kingdom", "Kanada": "Canada",
+    "Schweiz": "Switzerland", "Australien": "Australia", "UN": "UN", "Saudi-Arabien": "Saudi Arabia",
+    "Neuseeland": "New Zealand", "INTERPOL": "INTERPOL", "VAE": "United Arab Emirates", "Singapur": "Singapore",
+    "Frankreich": "France",
+    # sectors
+    "Universitäten": "Universities", "IRGC / Quds / Basij": "IRGC / Quds / Basij",
+    "Milizen / bewaffnete Gruppen": "Militias / armed groups", "Stiftungen (Bonyad)": "Foundations (bonyad)",
+    "Nuklear": "Nuclear", "Rüstung / Militär": "Defence / military", "Bank / Finanzen": "Banking / finance",
+    "Versicherung": "Insurance", "Energie (Öl, Gas, Strom)": "Energy (oil, gas, power)",
+    "Schifffahrt / Häfen": "Shipping / ports", "Luftfahrt": "Aviation", "Bahn / Transport / Logistik": "Rail / transport / logistics",
+    "Metall / Bergbau": "Metals / mining", "Elektronik / IT / Telekom": "Electronics / IT / telecom",
+    "Chemie / Pharma": "Chemicals / pharma", "Bau / Ingenieurwesen": "Construction / engineering",
+    "Fahrzeuge / Maschinenbau": "Vehicles / machinery", "Textil / Konsumgüter": "Textiles / consumer goods",
+    "Forschungsinstitute": "Research institutes", "Landwirtschaft / Lebensmittel": "Agriculture / food",
+    "Medien": "Media", "Ministerien / Behörden": "Ministries / authorities", "Handel / Import-Export": "Trade / import-export",
+    "Nicht zuordenbar": "Not assignable", "Person (kein Sektor)": "Person (no sector)",
+    # office groups
+    "Historische Herrscher": "Historical rulers", "Ausländische Parlamente": "Foreign parliaments",
+    "Revolutionsführer / Büro": "Supreme Leader / office", "Bewaffnete Gruppen (Ausland)": "Armed groups (abroad)",
+    "Expertenrat": "Assembly of Experts", "Parlament (Majles)": "Parliament (Majles)",
+    "Wächterrat / Schlichtungsrat": "Guardian / Expediency Council", "Justiz": "Judiciary",
+    "Geheimdienst / Sicherheit": "Intelligence / security", "Militär / IRGC": "Military / IRGC",
+    "Staatsmedien": "State media", "Atomenergie": "Atomic energy", "Regierung / Minister": "Government / ministers",
+    "Diplomatie": "Diplomacy", "Provinz / Kommunal": "Provincial / local", "Religiöse Ämter": "Religious offices",
+    "Wirtschaft / Unternehmen": "Business / companies", "Sonstige": "Other",
 }
 
 # Raw objective codes (used in the sender tables)
@@ -360,6 +470,11 @@ def num(value, decimals=0):
     return text
 
 
+def os_lab(value):
+    """Translate an OpenSanctions label (German in the data) into the selected language."""
+    return OS_LABELS_EN.get(value, value) if LANG == "en" else value
+
+
 # Percent sign: German style with a space ("86 %"), English without ("86%")
 PCT = " %" if LANG == "de" else "%"
 
@@ -389,6 +504,19 @@ def load_csv(name):
 def load_kpis():
     """Load the headline figures exported by the notebook."""
     return json.loads((DATA_DIR / "kpis.json").read_text())
+
+
+@st.cache_data
+def load_os():
+    """Load the OpenSanctions entity table (one row per entity)."""
+    return pd.read_csv(OS_FILE, dtype={"aemter": str, "aemter_aktuell": str, "amtsgruppen": str}).fillna(
+        {"aemter": "", "aemter_aktuell": "", "amtsgruppen": "", "akteure": "", "programme": ""})
+
+
+@st.cache_data
+def load_os_actors():
+    """Load the OpenSanctions actor table (one row per entity and sanctioning actor)."""
+    return pd.read_csv(OS_ACTORS_FILE)
 
 
 if not (DATA_DIR / "kpis.json").exists():
@@ -485,7 +613,7 @@ c3.metric(T["kpi_force"], kpis["iran_cases_in_force_2025"])
 c4.metric(T["kpi_us"], kpis["iran_cases_by_us"])
 c5.metric(T["kpi_eu"], kpis["iran_cases_by_eu"])
 
-tab_time, tab_senders, tab_instr, tab_outcomes, tab_global, tab_about = st.tabs(T["tabs"])
+tab_time, tab_senders, tab_instr, tab_outcomes, tab_global, tab_os, tab_about = st.tabs(T["tabs"])
 
 
 # ---------------------------------------------------------------- tab: over time
@@ -711,6 +839,120 @@ with tab_global:
     sender_comparison["top_objectives"] = sender_comparison["top_objectives"].map(translate_objective_codes)
     st.dataframe(cols(sender_comparison), width="stretch", hide_index=True)
     st.caption(T["cap_compare"] + " " + T["source_r5"] + " " + T["lang_note"])
+
+
+# ---------------------------------------------------------------- tab: who is targeted (OpenSanctions)
+with tab_os:
+    if not OS_FILE.exists() or not OS_ACTORS_FILE.exists():
+        st.info(T["os_no_data"])
+    else:
+        entities = load_os()
+        actors_long = load_os_actors()
+        sanctioned = entities[entities["kategorie"] == "Sanktioniert"]
+
+        st.markdown(T["os_intro"])
+        k1, k2, k3, k4, k5 = st.columns(5)
+        k1.metric(T["os_kpi_all"], num(len(entities)), help=T["os_kpi_all_help"])
+        k2.metric(T["os_kpi_sanc"], num(len(sanctioned)))
+        k3.metric(T["os_kpi_persons"], num((sanctioned["typ"] == "Person").sum()))
+        k4.metric(T["os_kpi_firms"], num(sanctioned["typ"].isin(["Firma", "Organisation", "Rechtsträger"]).sum()))
+        k5.metric(T["os_kpi_vessels"], num((sanctioned["typ"] == "Schiff").sum()))
+
+        # Sanctioned entities per actor (top 10)
+        left, right = st.columns([3, 2])
+        with left:
+            chart_title(T["os_t_actors"])
+            actor_counts = (
+                actors_long.groupby("akteur")["id"].nunique().reset_index(name="cases")
+                .sort_values("cases", ascending=False).head(10)
+            )
+            actor_counts["akteur"] = actor_counts["akteur"].map(os_lab)
+            fig = ranked_bars(actor_counts, "akteur", "cases")
+            fig.update_layout(xaxis_title="")
+            show_chart(fig, height=420)
+            st.caption(T["os_cap_actors"] + " " + T["os_source"])
+        with right:
+            st.markdown(f"**{T['os_h_overlap']}**")
+            us = sanctioned["sanktioniert_usa"].astype(bool)
+            eu = sanctioned["sanktioniert_eu"].astype(bool)
+            o1, o2 = st.columns(2)
+            o1.metric(T["os_only_us"], num((us & ~eu).sum()))
+            o2.metric(T["os_only_eu"], num((~us & eu).sum()))
+            o3, o4 = st.columns(2)
+            o3.metric(T["os_both"], num((us & eu).sum()))
+            o4.metric(T["os_neither"], num((~us & ~eu).sum()))
+
+        # Sectors of sanctioned companies, organisations and vessels
+        chart_title(T["os_t_sectors"])
+        non_persons = sanctioned[sanctioned["typ"] != "Person"]
+        unassigned = (non_persons["sektor"] == "Nicht zuordenbar").sum()
+        sectors = (
+            non_persons[non_persons["sektor"] != "Nicht zuordenbar"]["sektor"].value_counts()
+            .rename_axis("sektor").reset_index(name="cases")
+        )
+        sectors["sektor"] = sectors["sektor"].map(os_lab)
+        show_chart(ranked_bars(sectors, "sektor", "cases"), height=640)
+        share = num(unassigned / len(non_persons) * 100) + PCT
+        st.caption(T["os_cap_sectors"].format(n=num(unassigned), p=share) + " " + T["os_source"])
+
+        # Office groups: sanctioned persons vs. PEPs without sanctions
+        chart_title(T["os_t_offices"])
+        persons = entities[(entities["typ"] == "Person") & (entities["amtsgruppen"] != "")
+                           & entities["kategorie"].isin(["Sanktioniert", "Nur PEP"])]
+        offices = persons.assign(gruppe=persons["amtsgruppen"].str.split("; ")).explode("gruppe").reset_index(drop=True)
+        office_tab = pd.crosstab(offices["gruppe"], offices["kategorie"]).reindex(
+            columns=["Sanktioniert", "Nur PEP"], fill_value=0)
+        office_tab = office_tab.drop(index=["Sonstige", "Historische Herrscher"], errors="ignore")
+        office_tab = office_tab.loc[office_tab.sum(axis=1).sort_values().index]
+        fig = go.Figure()
+        for col, name, color in (("Nur PEP", T["os_pep_only"], COLOR_WORLD), ("Sanktioniert", T["os_sanctioned"], COLOR_MAIN)):
+            fig.add_bar(
+                y=[os_lab(g) for g in office_tab.index], x=office_tab[col], orientation="h", name=name,
+                marker_color=color, text=office_tab[col], textposition="outside",
+                hovertemplate="%{y}: %{x}<extra>" + name + "</extra>",
+            )
+        fig.update_layout(barmode="group", xaxis_title="", yaxis_title="", legend_traceorder="reversed")
+        show_chart(fig, height=720)
+        st.caption(T["os_cap_offices"] + " " + T["os_source"])
+
+        # Search and filter table
+        st.subheader(T["os_h_search"])
+        f1, f2, f3, f4 = st.columns(4)
+        f_type = f1.multiselect(T["os_f_type"], sorted(entities["typ"].unique()), format_func=os_lab)
+        f_cat = f2.multiselect(T["os_f_cat"], sorted(entities["kategorie"].unique()), format_func=os_lab)
+        f_sector = f3.multiselect(T["os_f_sector"], sorted(entities["sektor"].unique()), format_func=os_lab)
+        f_actor = f4.multiselect(T["os_f_actor"], sorted(actors_long["akteur"].unique()), format_func=os_lab)
+        search = st.text_input(T["os_search"])
+
+        view = entities
+        if f_type:
+            view = view[view["typ"].isin(f_type)]
+        if f_cat:
+            view = view[view["kategorie"].isin(f_cat)]
+        if f_sector:
+            view = view[view["sektor"].isin(f_sector)]
+        if f_actor:
+            ids = actors_long[actors_long["akteur"].isin(f_actor)]["id"]
+            view = view[view["id"].isin(ids)]
+        if search:
+            view = view[view["name"].str.contains(search, case=False, regex=False)
+                        | view["aliases"].fillna("").str.contains(search, case=False, regex=False)]
+
+        table = view[["name", "typ", "kategorie", "sektor", "akteure", "amtsgruppen", "aemter", "programme"]].copy()
+        for col in ["typ", "kategorie", "sektor"]:
+            table[col] = table[col].map(os_lab)
+        if LANG == "en":
+            table["akteure"] = table["akteure"].map(lambda x: "; ".join(os_lab(a) for a in x.split("; ")) if x else "")
+            table["amtsgruppen"] = table["amtsgruppen"].map(lambda x: "; ".join(os_lab(a) for a in x.split("; ")) if x else "")
+        headers = {
+            "en": {"name": "Name", "typ": "Type", "kategorie": "Category", "sektor": "Sector", "akteure": "Sanctioned by",
+                   "amtsgruppen": "Office groups", "aemter": "Offices", "programme": "Programmes"},
+            "de": {"name": "Name", "typ": "Typ", "kategorie": "Kategorie", "sektor": "Sektor", "akteure": "Sanktioniert von",
+                   "amtsgruppen": "Amtsgruppen", "aemter": "Ämter", "programme": "Programme"},
+        }
+        st.caption(T["os_rows"].format(n=num(len(table))))
+        st.dataframe(table.rename(columns=headers[LANG]), width="stretch", hide_index=True, height=420)
+        st.caption(T["os_cap_table"] + " " + T["os_source"])
 
 
 # ---------------------------------------------------------------- tab: about
