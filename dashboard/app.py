@@ -1,4 +1,4 @@
-"""Streamlit dashboard: Sanctions against Iran, 1979–2025 (English / Deutsch).
+"""Streamlit dashboard: Sanctions against Iran (English / Deutsch).
 
 Reads only the aggregated tables exported by iran_sanctions_analysis.ipynb (section 9),
 so no individual GSDB sanction cases are included. The tab "Who is targeted" reads the
@@ -37,8 +37,8 @@ st.set_page_config(page_title="Sanctions against Iran / Sanktionen gegen den Ira
 # ---------------------------------------------------------------- texts (EN / DE)
 TEXT = {
     "en": {
-        "title": "Sanctions against Iran, 1979–2025",
-        "intro": "All recorded sanction cases against Iran and their place in global sanction activity.",
+        "title": "Sanctions against Iran",
+        "intro": "Sanction cases against Iran 1979–2025 and their place in global sanction activity (GSDB); listed Iranian entities as of 27 Oct 2026 (OpenSanctions, tab \"Who is targeted\").",
         "source_r5": "Data: Global Sanctions Data Base, Release 5 (Felbermayr et al., 2020).",
         "source_fs": "Data: Global Sanctions Data Base – Financial Sanctions (Yotov et al., 2026).",
         "no_data": "No data found. Run iran_sanctions_analysis.ipynb first (section 9 exports the tables to dashboard/data).",
@@ -197,8 +197,8 @@ Analysis: Amirhoushang Rahmannejad, [github.com/Amirhouschang](https://github.co
 """,
     },
     "de": {
-        "title": "Sanktionen gegen den Iran, 1979–2025",
-        "intro": "Alle erfassten Sanktionsfälle gegen den Iran und ihre Einordnung in das weltweite Sanktionsgeschehen.",
+        "title": "Sanktionen gegen den Iran",
+        "intro": "Sanktionsfälle gegen den Iran 1979–2025 und ihre Einordnung in das weltweite Sanktionsgeschehen (GSDB); gelistete iranische Entitäten, Stand 27.10.2026 (OpenSanctions, Tab „Wer ist betroffen“).",
         "source_r5": "Daten: Global Sanctions Data Base, Release 5 (Felbermayr et al., 2020).",
         "source_fs": "Daten: Global Sanctions Data Base – Financial Sanctions (Yotov et al., 2026).",
         "no_data": "Keine Daten gefunden. Zuerst iran_sanctions_analysis.ipynb ausführen (Abschnitt 9 exportiert die Tabellen nach dashboard/data).",
@@ -603,7 +603,7 @@ def ranked_bars(df, label_col, value_col, highlight=None, x_title=None):
 
 # ---------------------------------------------------------------- header
 st.title(T["title"])
-st.caption(T["intro"] + " " + T["source_r5"])
+st.caption(T["intro"])
 
 c1, c2, c3, c4, c5 = st.columns(5)
 c1.metric(T["kpi_cases"], kpis["cases_iran"],
