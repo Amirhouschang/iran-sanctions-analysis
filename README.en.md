@@ -1,11 +1,11 @@
-# Sanctions against Iran, 1979–2025
+# Sanctions against Iran
 
 🇩🇪 [Deutsche Version](README.md)
 
 Analysis of sanctions against Iran on two levels:
 
-- **Sanction cases (GSDB):** all recorded sanction cases against Iran since 1979 and their place in global sanction activity: who imposed sanctions, with which instruments, for which reasons, and with what result.
-- **Who is targeted (OpenSanctions):** which Iranian companies, persons, organisations and vessels are on sanctions lists today, in which sectors and with which offices.
+- **Sanction cases (GSDB), 1979–2025:** all recorded sanction cases against Iran and their place in global sanction activity: who imposed sanctions, with which instruments, for which reasons, and with what result.
+- **Who is targeted (OpenSanctions), as of 27 Oct 2026:** which Iranian companies, persons, organisations and vessels are on sanctions lists today, in which sectors and with which offices.
 
 ## Interactive dashboard
 
